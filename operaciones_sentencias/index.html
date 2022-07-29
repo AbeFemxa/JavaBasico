@@ -1,0 +1,2265 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../img/favicon/favicon.ico">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-6.2.8">
+    
+    
+      
+        <title>Operaciones y Sentencias - Curso Básico Java</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.cb6bc1d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.39b8e14a.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#4-operadores-y-sentencias" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Curso Básico Java" class="md-header-nav__button md-logo" aria-label="Curso Básico Java">
+      
+  <img src="../img/logo/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            Curso Básico Java
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              Operaciones y Sentencias
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Curso Básico Java" class="md-nav__button md-logo" aria-label="Curso Básico Java">
+      
+  <img src="../img/logo/logo.png" alt="logo">
+
+    </a>
+    Curso Básico Java
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+      
+      <label class="md-nav__link" for="nav-1">
+        Bloque Java Básico
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Bloque Java Básico" data-md-level="1">
+        <label class="md-nav__title" for="nav-1">
+          <span class="md-nav__icon md-icon"></span>
+          Bloque Java Básico
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Índice de contenido
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java_intro/" class="md-nav__link">
+        Java
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entorno/" class="md-nav__link">
+        Entorno de desarrollo
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bloques_basicos/" class="md-nav__link">
+        Bloques básicos en Java
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Operaciones y Sentencias
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Operaciones y Sentencias
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#4-operadores-y-sentencias" class="md-nav__link">
+    4. Operadores y sentencias
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-entender-los-operadores-de-java" class="md-nav__link">
+    4.1. Entender los operadores de Java
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-trabajando-con-operadores-binarios-aritmeticos" class="md-nav__link">
+    4.2. Trabajando con operadores binarios aritméticos
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2. Trabajando con operadores binarios aritméticos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421-operadores-aritmeticos" class="md-nav__link">
+    4.2.1. Operadores aritméticos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-promocion-numerica" class="md-nav__link">
+    4.2.2. Promoción numérica
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-trabajando-con-operadores-unarios" class="md-nav__link">
+    4.3. Trabajando con operadores unarios
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3. Trabajando con operadores unarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431-complemento-logico-y-operadores-de-negacion" class="md-nav__link">
+    4.3.1. Complemento lógico y operadores de negación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432-operadores-de-incremento-y-decremento" class="md-nav__link">
+    4.3.2. Operadores de incremento y decremento.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-usando-los-operadores-binarios-adicionales" class="md-nav__link">
+    4.4. Usando los operadores binarios adicionales
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4. Usando los operadores binarios adicionales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#441-operadores-de-asignacion" class="md-nav__link">
+    4.4.1. Operadores de asignación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#442-casting-de-valores-primitivos" class="md-nav__link">
+    4.4.2. Casting de valores primitivos
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4.2. Casting de valores primitivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overflow-y-underflow" class="md-nav__link">
+    Overflow y Underflow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#443-operadores-de-asignacion-compuestos" class="md-nav__link">
+    4.4.3. Operadores de asignación compuestos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#444-operadores-relacionales" class="md-nav__link">
+    4.4.4. Operadores relacionales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#445-operadores-logicos" class="md-nav__link">
+    4.4.5. Operadores lógicos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#446-operadores-de-igualdad" class="md-nav__link">
+    4.4.6. Operadores de igualdad
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-comprender-las-sentencias-de-java" class="md-nav__link">
+    4.5. Comprender las sentencias de Java
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5. Comprender las sentencias de Java">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#451-if-then" class="md-nav__link">
+    4.5.1. if-then
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#452-if-then-else" class="md-nav__link">
+    4.5.2. if-then-else
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#453-operador-ternario" class="md-nav__link">
+    4.5.3. Operador Ternario
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        API de Java
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metodos_encapsulamiento/" class="md-nav__link">
+        Métodos y encapsulamiento
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dise%C3%B1o_clases/" class="md-nav__link">
+        Diseño de clases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../excepciones/" class="md-nav__link">
+        Excepciones
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#4-operadores-y-sentencias" class="md-nav__link">
+    4. Operadores y sentencias
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-entender-los-operadores-de-java" class="md-nav__link">
+    4.1. Entender los operadores de Java
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-trabajando-con-operadores-binarios-aritmeticos" class="md-nav__link">
+    4.2. Trabajando con operadores binarios aritméticos
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2. Trabajando con operadores binarios aritméticos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421-operadores-aritmeticos" class="md-nav__link">
+    4.2.1. Operadores aritméticos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-promocion-numerica" class="md-nav__link">
+    4.2.2. Promoción numérica
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-trabajando-con-operadores-unarios" class="md-nav__link">
+    4.3. Trabajando con operadores unarios
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3. Trabajando con operadores unarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431-complemento-logico-y-operadores-de-negacion" class="md-nav__link">
+    4.3.1. Complemento lógico y operadores de negación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432-operadores-de-incremento-y-decremento" class="md-nav__link">
+    4.3.2. Operadores de incremento y decremento.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-usando-los-operadores-binarios-adicionales" class="md-nav__link">
+    4.4. Usando los operadores binarios adicionales
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4. Usando los operadores binarios adicionales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#441-operadores-de-asignacion" class="md-nav__link">
+    4.4.1. Operadores de asignación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#442-casting-de-valores-primitivos" class="md-nav__link">
+    4.4.2. Casting de valores primitivos
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4.2. Casting de valores primitivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overflow-y-underflow" class="md-nav__link">
+    Overflow y Underflow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#443-operadores-de-asignacion-compuestos" class="md-nav__link">
+    4.4.3. Operadores de asignación compuestos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#444-operadores-relacionales" class="md-nav__link">
+    4.4.4. Operadores relacionales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#445-operadores-logicos" class="md-nav__link">
+    4.4.5. Operadores lógicos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#446-operadores-de-igualdad" class="md-nav__link">
+    4.4.6. Operadores de igualdad
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-comprender-las-sentencias-de-java" class="md-nav__link">
+    4.5. Comprender las sentencias de Java
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5. Comprender las sentencias de Java">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#451-if-then" class="md-nav__link">
+    4.5.1. if-then
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#452-if-then-else" class="md-nav__link">
+    4.5.2. if-then-else
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#453-operador-ternario" class="md-nav__link">
+    4.5.3. Operador Ternario
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Operaciones y Sentencias</h1>
+                
+                <h2 id="4-operadores-y-sentencias">4. Operadores y sentencias</h2>
+<h2 id="41-entender-los-operadores-de-java">4.1. Entender los operadores de Java</h2>
+<p>Los operadores de java son símbolos especiales que se aplican un grupo de variables, valores o “literales”
+y que devuelven un valor. Existen tres tipos de operadores en Java: unario, binario y ternario. Estos
+tipos de operadores pueden ser aplicados a uno, dos o tres operandos.
+Los operadores de java no siempre se evalúan de izquierda a derecha. En el siguiente ejemplo se puede
+observar como la expresión se evalúa de derecha a izquierda:
+<div class="highlight"><pre><span></span><code>int y = 4; double x =
+3 + 2 * --y;
+</code></pre></div>
+En el ejemplo primero se reduce en uno la variable y, después se multiplica por 2 y por último se le
+suman 3. El resultado final será convertido de 9 a 9.0 y asignado a la variable x. Los valores de x e y
+serán 9.0 y 3. A menos que estén entre paréntesis, los operadores de Java siguen un orden de operación
+que se encuentran listados en la tabla. Si dos operadores están en el mismo nivel se evaluarán de
+izquierda a derecha.</p>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Símbolos y ejemplos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operadores post-unarios</td>
+<td>Expresión++, Expresión--</td>
+</tr>
+<tr>
+<td>Operadores pre-unarios</td>
+<td>++Expresión, --Expresión</td>
+</tr>
+<tr>
+<td>Operadores unarios</td>
+<td>+, -,!</td>
+</tr>
+<tr>
+<td>Multiplicación, División, Módulo</td>
+<td>*, /, %</td>
+</tr>
+<tr>
+<td>Suma, Resta</td>
+<td>+, -</td>
+</tr>
+<tr>
+<td>Operadores de cambio</td>
+<td>&lt;&lt;, &gt;&gt;, &gt;&gt;&gt;</td>
+</tr>
+<tr>
+<td>Operadores relacionales</td>
+<td>&lt;, &gt;, &lt;=, &gt;=, instanceof</td>
+</tr>
+<tr>
+<td>Igual, Distinto</td>
+<td>==, !=</td>
+</tr>
+<tr>
+<td>Operadores lógicos</td>
+<td>&amp;, ^,</td>
+</tr>
+<tr>
+<td>Operadores lógicos de cortocircuito</td>
+<td>&amp;&amp;,</td>
+</tr>
+<tr>
+<td>Operadores ternarios</td>
+<td>Expresión booleana? expresión1 : expresión 2</td>
+</tr>
+<tr>
+<td>Operadores de asignación</td>
+<td>=, +=, -=, *=, /=, %=, &amp;=, ^=, !=, &lt;&lt;=, &gt;&gt;=, &gt;&gt;&gt;=</td>
+</tr>
+</tbody>
+</table>
+<h2 id="42-trabajando-con-operadores-binarios-aritmeticos">4.2. Trabajando con operadores binarios aritméticos</h2>
+<h3 id="421-operadores-aritmeticos">4.2.1. Operadores aritméticos</h3>
+<p>Los operadores aritméticos son los utilizados en las matemáticas y son los siguiente: la suma (+), la
+resta (-), la multiplicación (*), la división (/) y el módulo (%). También se incluyen los operadores unarios</p>
+<p>++ y --. Como puedes comprobar en la tabla anterior los operadores <em>, / y % tienen mayor orden de
+preferencia que los operadores + y -, por lo que la siguiente expresión:
+<div class="highlight"><pre><span></span><code>int x = 2 * 5 + 3 * 4 – 8;
+</code></pre></div>
+Se evaluará primero 2</em>5 y 3*4 simplificando la expresión a la siguiente:
+<div class="highlight"><pre><span></span><code>int x = 10 + 12 – 8;
+</code></pre></div>
+Después se evaluará la expresión de izquierda a derecha dando como resultado 14.
+Se puede cambiar el orden de la operación añadiendo paréntesis a las secciones que se quiere evaluar
+primero. Se compara el ejemplo de antes con el siguiente que incorpora paréntesis:
+<div class="highlight"><pre><span></span><code>int x = 2 * ((5 + 3) * 4 – 8);
+</code></pre></div>
+Esta vez se deberá evaluar la suma 5 + 3 primero, que reducirá la expresión a:
+<div class="highlight"><pre><span></span><code>int x = 2 * (8 * 4 - 8);
+</code></pre></div>
+Se podrá reducir la expresión multiplicando los dos primeros valores dentro del paréntesis:
+<div class="highlight"><pre><span></span><code>int x = 2 * (32 - 8);
+</code></pre></div>
+Después se restará los valores de dentro del paréntesis antes de multiplicarlos por el valor de fuera:
+<div class="highlight"><pre><span></span><code>int x = 2 * 24;
+</code></pre></div>
+Finalmente se multiplicarán los valores restantes, dando un resultado de 48.
+Todos los operadores aritméticos pueden ser aplicados a cualquier tipo primitivo de Java, salvo los tipos
+boolean y string. Además, solo los operadores + y += pueden ser aplicados a variables string, lo que
+resulta ser una concatenación de string.
+El módulo es el resto de la división de dos números, por ejemplo 9 divido entre 3 no tiene resto por lo
+que 9 % 3 será 0. Por otra parte 11 divido entre 3 si tiene resto por lo tanto 11 % 3 será igual a 2.
+Hay que tener clara la diferencia entre la división y el módulo. La división devuelve el cociente,
+mientras que el módulo devuelve el resto de la división. Los siguientes ejemplos ilustran la diferencia
+entre ambas operaciones:
+<div class="highlight"><pre><span></span><code>System.out.print(9 / 3); // Outputs 3
+System.out.print(9 % 3); // Outputs 0
+System.out.print(10 / 3); // Outputs 3
+System.out.print(10 % 3); // Outputs 1
+System.out.print(11 / 3); // Outputs 3
+System.out.print(11 % 3); // Outputs 2
+System.out.print(12 / 3); // Outputs 4
+System.out.print(12 % 3); // Outputs 0
+</code></pre></div>
+Hay que tener en cuenta que el resultado de la división solo se incrementa cuando el valor de la izquierda
+se incrementa de 9 a 12, mientras que el módulo incrementa en 1, cada vez que el valor de la izquierda
+se incrementa, hasta que se convierte en 0. Para un divisor dado y, que es 3 en estos ejemplos, la</p>
+<p>operación de módulo da como resultado un valor entre 0 y (y - 1) para dividendos positivos. Esto significa
+que el resultado de una operación de módulo es siempre 0,1 o 2.
+El funcionamiento del módulo no se limita a los valores enteros positivos en Java y también puede
+aplicarse a números enteros negativos y números enteros de coma flotante. Para un divisor “y” y
+dividendo negativo dado, el valor del módulo resultante está entre (-y + 1) y 0.</p>
+<h3 id="422-promocion-numerica">4.2.2. Promoción numérica</h3>
+<p>Reglas de la promoción numérica:</p>
+<ol>
+<li>Si dos variables tienes diferente tipo, Java automáticamente convertirá una de las variables al
+   tipo más grande de las dos.</li>
+<li>Si una de las variables es Integer y la otra de coma flotante(float), Java automáticamente
+   convertirá la variable Integer en una de coma flotante.</li>
+<li>Los tipos de datos pequeños como byte, short y char son convertidos a Int siempre que son
+   usados por un operador aritmético binario, incluso si ninguno de los operandos es un Int.</li>
+<li>Después de que se hayan convertido las variables y los operandos tengan el mismo tipo, el
+   resultado se guardará con el mismo tipo al que se hayan convertido los operandos.
+   Las dos últimas reglas son aquellas con las que la mayoría de la gente tiene problemas. Por lo que
+   respecta a la tercera regla, debe tenerse en cuenta que los operadores unitarios están excluidos de esta.
+   Por ejemplo, aplicar ++ a un valor short dará como resultado un valor short.</li>
+</ol>
+<h2 id="43-trabajando-con-operadores-unarios">4.3. Trabajando con operadores unarios</h2>
+<p>Por definición un operador unario es uno que requiere exactamente un operando o variable para
+funcionar. Como se muestra en la tabla suelen realizar tareas simples como incrementar en uno una
+variable o negar el valor de un boolean.</p>
+<table>
+<thead>
+<tr>
+<th>Operador unario</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td>Indica que un número es positivo, aunque se supone que los números son positivos en Java a menos que vayan acompañados de un operador negativo unario.</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Indica que un número es negativo o niega una expresión</td>
+</tr>
+<tr>
+<td>++</td>
+<td>Incremento una variable en 1</td>
+</tr>
+<tr>
+<td>--</td>
+<td>Decremento de una variable en 1</td>
+</tr>
+<tr>
+<td>!</td>
+<td>Invierte el valor lógico de un boolean</td>
+</tr>
+</tbody>
+</table>
+<h3 id="431-complemento-logico-y-operadores-de-negacion">4.3.1. Complemento lógico y operadores de negación</h3>
+<p>El operador de complemento lógico(!) invierte el valor de una expresión booleana. Por ejemplo, si el
+valor es true, se invertiría a false, y viceversa. Para demostrar esto, se comparará la salida de las
+siguientes instrucciones:
+<div class="highlight"><pre><span></span><code>boolean x = false;
+System.out.printl(x); //false x = !x;
+System.out.println(x); //true
+</code></pre></div>
+Por otra parte, el operador de negación (-) cambia el signo de una expresión numérica como se muestra
+a continuación:
+<div class="highlight"><pre><span></span><code>double x =
+
+1.21;
+System.out.println(x); //1.21 x = -x;
+System.out.println(x); //-1.21 x = -x;
+System.out.println(x); //1.21
+</code></pre></div>
+Si uno se basa en la descripción, podría ser obvio que algunos operadores requieran la variable de un
+tipo específico. No se puede utilizar un operador de negación, -, con una expresión booleana, ni se puede
+aplicar un complemento lógico a una expresión numérica. Por ejemplo, ninguna de las siguientes líneas
+de código compilará:
+<div class="highlight"><pre><span></span><code>int x = !5; // DOES NOT COMPILE boolean
+y = -true; // DOES NOT COMPILE boolean
+z = !0; // DOES NOT COMPILE
+</code></pre></div>
+La primera declaración no se compilará debido al hecho de que en Java no se puede realizar una inversión
+lógica de un valor numérico. La segunda declaración no compilará porque no se puede negar
+numéricamente un valor booleano, es necesario utilizar el operador lógico inverso. Finalmente, la última
+sentencia no se compila porque no se puede tomar el complemento lógico de un valor numérico, ni se
+puede asignar un entero a una variable booleana.</p>
+<h3 id="432-operadores-de-incremento-y-decremento">4.3.2. Operadores de incremento y decremento.</h3>
+<p>Los operadores de incremento y decremento (++, --) pueden aplicarse a operandos numéricos y tienen
+mayor preferencia que los operadores binarios.
+Los operadores de incremento y decremento requieren un cuidado especial ya que el orden en el que
+son utilizados con los operandos pueden provocar un procesamiento distinto de la expresión. Si el
+operador está situado delante del operando entonces el operador se aplica primero y luego se devuelve
+el valor. Por otro lado, si el operador se encuentra detrás del operando se devuelve primero el valor
+original y luego se aplica el operador. El siguiente código ilustra las diferencias:
+<div class="highlight"><pre><span></span><code>int counter = 0;
+
+System.out.println(counter); // Outputs 0
+
+System.out.println(++counter); // Outputs 1
+
+System.out.println(counter); // Outputs 1
+
+System.out.println(counter--); // Outputs 1
+
+System.out.println(counter); // Outputs 0
+</code></pre></div>
+El primer operador de pre-incremento actualiza el valor del contador y devuelve el nuevo valor de 1. El
+siguiente operador de post-decremento también actualiza el valor del contador pero devuelve el valor
+antes de que se produzca la disminución. El siguiente ejemplo es todavía más complicado ya que se
+modifica el valor 3 veces en la misma línea:
+<div class="highlight"><pre><span></span><code>int x = 3;
+int y = ++x * 5 / x-- + --x; 
+System.out.println(&quot;x is &quot; + x);
+System.out.println(&quot;y is &quot; + y);
+</code></pre></div>
+Cada vez que se modifica, la expresión pasa de izquierda a derecha, el valor de x cambia, con diferentes
+valores asignados a la variable. Como recordarás de nuestra discusión sobre la precedencia del operador,
+el orden de la operación juega un papel importante en evaluando este ejemplo.
+Primero, la x se incrementa y se devuelve a la expresión, que se multiplica por 5:
+<div class="highlight"><pre><span></span><code>int y = 4 * 5 / x-- + --x; // x con valor 4
+</code></pre></div>
+A continuación, se decrementa x, pero el valor original de 4 se utiliza en la expresión, lo que lleva a esto:
+<div class="highlight"><pre><span></span><code>int y = 4 * 5 / 4 + --x; // x con valor 3
+</code></pre></div>
+La asignación final de x reduce el valor a 2, y como se trata de un operador pre-incremental, se devuelve
+ese valor:
+<div class="highlight"><pre><span></span><code>int y = 4 * 5 / 4 + 2; // x con valor 2
+</code></pre></div>
+Finalmente, se realiza la multiplicación y a continuación la división, y por último la suma dando como
+resultado:
+<div class="highlight"><pre><span></span><code>x is 2 y
+is 7
+</code></pre></div></p>
+<h2 id="44-usando-los-operadores-binarios-adicionales">4.4. Usando los operadores binarios adicionales</h2>
+<h3 id="441-operadores-de-asignacion">4.4.1. Operadores de asignación</h3>
+<p>Los operadores de asignación son operadores binarios que modifican la variable con el valor del lado
+derecho de la ecuación. El operador de asignación más simple es el operador “=”:
+<div class="highlight"><pre><span></span><code>int x = 1;
+</code></pre></div>
+Esta declaración asigna a x el valor 1.
+Java transformará automáticamente de tipos de datos pequeños a grandes, como vimos en la sección
+anterior, pero lanzará una excepción de compilador si detecta que está intentando convertir tipos de
+datos grandes a pequeños.
+Vamos a ver unos ejemplos para demostrar como el “casting” puede resolver estos problemas:
+<div class="highlight"><pre><span></span><code>int x = 1.0; // DOES NOT COMPILE 
+
+short y = 1921222; // DOES NOT
+
+COMPILE int z = 9f; // DOES NOT COMPILE
+
+long t = 192301398193810323; // DOES NOT COMPILE
+</code></pre></div>
+La primera sentencia no compila porque está tratando de asignar un double a un valor int. A pesar de
+que el valor es un entero, al sumar “. 0”, está indicando al compilador que lo trate como un double. La
+segunda declaración no compila porque el valor 1921222 está fuera del rango de short. La tercera
+declaración no compila debido a la “f” añadida al final del número que indica al compilador que ha de
+tratar al número como un float. Finalmente, el último enunciado no compila porque Java interpreta el
+valor como un int y nota que es mayor de lo que permite int. El último caso necesitaría un postfix L para
+ser considerado un long.</p>
+<h3 id="442-casting-de-valores-primitivos">4.4.2. Casting de valores primitivos</h3>
+<p>Se pueden arreglar los ejemplos de la sección anterior, haciendo “casting” a los resultados. El “casting”
+es necesario siempre que se pase de un dato numérico más grande a un tipo de datos numéricos más
+pequeños, o la conversión de un número float a un valor int.
+<div class="highlight"><pre><span></span><code>int x = (int)1.0; 
+
+short y = (short)1921222; // Stored as 20678 int
+
+z = (int)9l;
+
+long t = 192301398193810323L;
+</code></pre></div>
+Algunos ejemplos:
+<div class="highlight"><pre><span></span><code>short x = 10; 
+
+short y = 3;
+
+short z = x * y; // DOES NOT COMPILE
+</code></pre></div>
+Basando todo en lo que se ha aprendido hasta ahora, ¿por qué las últimas líneas de esta declaración no
+compilarán? Recordar, los valores short se transforman automáticamente a int con cualquier operador
+aritmético, con el valor resultante de tipo int. Tratar de establecer una variable corta en una int resulta
+en un error del compilador, como piensa Java, está intentando convertir implícitamente de un tipo de
+datos más grande a uno más pequeño.
+Hay ocasiones en las que se puede querer anular el comportamiento predeterminado del compilador. Por
+ejemplo, en el ejemplo anterior, se sabe que el resultado de 10 * 3 es 30, que puede ser guardado en
+un short. Sin embargo, si se necesita que el resultado sea un short puede sustituirse este
+comportamiento haciendo “casting” del resultado de la multiplicación:
+<div class="highlight"><pre><span></span><code>short x = 10; short y = 3;
+
+short z = (short)(x * y);
+</code></pre></div>
+Al realizar este “casting” de un tipo de datos mayor a un tipo de datos más pequeño, se está ordenando
+al compilador que ignore su comportamiento predeterminado. En otras palabras, se le está diciendo al
+compilador que se está tomando medidas adicionales para evitar el overflow o el underflow.</p>
+<h4 id="overflow-y-underflow">Overflow y Underflow</h4>
+<p>Las expresiones en el ejemplo anterior ahora compilan, aunque hay un coste. El segundo valor,
+1.921.222, es demasiado grande para ser almacenado como un valor short, por lo que se produce un
+overflow y se convierte en 20.678. El overflow es cuando un número es tan grande que ya no se puede
+guardar dentro de un tipo de datos, por lo que el sistema se "envuelve" en el siguiente valor mínimo y</p>
+<p>cuenta desde ahí. También hay un underflow analogo, cuando el número es demasiado bajo para
+guardarlo en el tipo de datos.
+Por ejemplo, la siguiente sentencia genera un número negativo:
+<div class="highlight"><pre><span></span><code>_System.out.println(2147483647+1); // - 214748364848_
+</code></pre></div>
+Dado que 2147483647 es el valor máximo de int, sumando cualquier valor estrictamente positivo a él se
+obtendrá lo siguiente al siguiente número negativo.</p>
+<h3 id="443-operadores-de-asignacion-compuestos">4.4.3. Operadores de asignación compuestos</h3>
+<p>Además del operador simple de asignación, =, existen también numerosos operadores de asignación
+compuestos. Sólo se requieren dos de los operadores compuestos enumerados en la Tabla 2.1, += y =.
+Los operadores complejos son en realidad una mejora de los operadores de asignación simple con una
+operación aritmética o lógica incorporada que se aplican de izquierda a derecha de la expresión y
+almacena el valor resultante en la variable de la parte izquierda de la pantalla. Por ejemplo, las dos
+expresiones siguientes después de la declaración de x y z son equivalentes:
+<div class="highlight"><pre><span></span><code>int x = 2, z = 3; x = x * z; // Simple
+
+assignment operator x *= z; // Compound
+
+assignment operator
+</code></pre></div>
+El lado izquierdo del operador compuesto sólo se puede aplicar a una variable que ya esté definida y no
+se puede utilizar para declarar una nueva variable. En el ejemplo anterior, si x no estaba ya definida,
+entonces la expresión x *=z no compilaría.
+Los operadores compuestos son útiles para algo más que la mera abreviatura, también se puede ahorrar
+el tener que hacer “casting” a un valor. Por ejemplo, si se considera el siguiente ejemplo en que la última
+línea no compilará debido a que el resultado es transformado a long y asignado a una variable int:
+<div class="highlight"><pre><span></span><code>long x = 10; int y = 5;
+
+y = y * x; // DOES NOT COMPILE
+</code></pre></div>
+Si uno se basa en las dos últimas secciones, se debería poder detectar el problema en la última línea.
+Esta última línea podría ser fijada con un “casting” a int, pero hay una manera mejor, usando el operador de asignación compuesto:
+<div class="highlight"><pre><span></span><code>long x = 10;
+
+int y = 5; 
+
+y*= x;
+</code></pre></div>
+El operador compuesto hará un “casting” primero de x a long, aplicará la multiplicación de dos valores
+long, y luego devolverá el resultado a un int. A diferencia del ejemplo anterior, en el que el compilador
+lanzará una excepción, en este ejemplo vemos que el compilador hará un “casting” automáticamente del
+valor resultante al tipo de datos de la variable del lado izquierdo del operador compuesto.
+Una cosa importante que se debe saber acerca del operador de asignación es que el resultado de la
+asignación es una expresión en sí misma, igual al valor de la asignación. Por ejemplo, el siguiente
+fragmento de código es perfectamente válido, aunque un poco extraño:</p>
+<p><div class="highlight"><pre><span></span><code>long x = 5; long
+
+y = (x=3);
+
+System.out.println(x); // Outputs 3
+
+System.out.println(y); // Also, outputs 3
+</code></pre></div>
+La clave aquí es que (x=3) hace dos cosas.  </p>
+<ul>
+<li>En primer lugar, fija el valor de la variable x para que sea 3.</li>
+<li>En segundo lugar, devuelve el valor de la asignación, que también es 3.</li>
+</ul>
+<h3 id="444-operadores-relacionales">4.4.4. Operadores relacionales</h3>
+<p>Ahora se pasará a los operadores relacionales, que comparan dos expresiones y devuelven un valor
+booleano. Los primeros cuatro operadores relacionales (ver la tabla se aplican solo a tipos de datos
+primitivos numéricos. Si los dos operando numéricos no son del mismo tipo de datos, el parámetro más
+pequeño se transforma de la manera anteriormente discutida.</p>
+<table>
+<thead>
+<tr>
+<th>Operador relacional</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;</td>
+<td>Estrictamente menos que</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>Menos que o igual a</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>Estrictamente mayor que</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>Mayor que o igual a</td>
+</tr>
+</tbody>
+</table>
+<p>A continuación, se verán unos ejemplos de estos operadores:
+<div class="highlight"><pre><span></span><code>int x = 10, y = 20, z = 10;
+
+System.out.println(x &lt; y); // Outputs true
+
+System.out.println(x &lt;= y); // Outputs true
+
+System.out.println(x &gt;= z); // Outputs true
+
+System.out.println(x &gt; z); // Outputs false
+</code></pre></div>
+Observar que el último ejemplo produce una salida false, porque, aunque x y z son el mismo valor, x no
+es estrictamente mayor que z.
+El quinto operador relacional (ver la tabla de abajo) se aplica a objetos y clases, o bien a interfaces.</p>
+<table>
+<thead>
+<tr>
+<th>Operador relacional</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a instanceof b</td>
+<td>Verdadero si la referencia a la que apunta “a” es una instancia de una clase, subclase o clase que implementa una interfaz particular, como se nombra en b</td>
+</tr>
+</tbody>
+</table>
+<p>Cabe destacar lo siguiente respecto al operador instanceof:
+<div class="highlight"><pre><span></span><code>String str = null;
+
+System.out.println(str instanceof String ); // false
+</code></pre></div>
+Es decir: no basta con declarar la variable como de un tipo sino que debe ser realmente un objeto de
+ese tipo (como consecuencia, no es necesario comparar contra null).
+<div class="highlight"><pre><span></span><code>if (x != null &amp;&amp; x instanceof X) ...
+</code></pre></div>
+Se puede simplificar a:
+<div class="highlight"><pre><span></span><code>if (x instanceof X) ...
+</code></pre></div></p>
+<h3 id="445-operadores-logicos">4.4.5. Operadores lógicos</h3>
+<p>Los operadores lógicos, (&amp;), (|) y (^), se pueden aplicar a datos de tipo numéricos y booleanos. Cuando
+se aplican a tipos de datos booleanos, se los denomina operadores lógicos. Alternativamente, cuando se
+aplican a tipos de datos numéricos, se les llama operadores a nivel de bit, ya que realizan comparacionesbit a bit de los bits que componen el número. Se debe familiarizar con las tablas de las figuras, donde se supone que x e y son tipos de datos booleanos.  </p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>X &amp; Y (AND)</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Y=true</td>
+<td>Y=false</td>
+</tr>
+<tr>
+<td>X = true</td>
+<td>True</td>
+<td>False</td>
+</tr>
+<tr>
+<td>X = false</td>
+<td>False</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>X &#124; Y (Inclusive OR)</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Y=true</td>
+<td>Y=false</td>
+</tr>
+<tr>
+<td>X = true</td>
+<td>True</td>
+<td>True</td>
+</tr>
+<tr>
+<td>X = false</td>
+<td>True</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>X ^ Y (Exclusive OR)</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Y=true</td>
+<td>Y=false</td>
+</tr>
+<tr>
+<td>X = true</td>
+<td>False</td>
+<td>True</td>
+</tr>
+<tr>
+<td>X = false</td>
+<td>True</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+<p>Aquí hay algunos consejos para ayudar a recordar esta tabla:</p>
+<ul>
+<li><strong>AND</strong> solo es verdadero si ambos operandos son verdaderos.</li>
+<li><strong>OR</strong> inclusivo solo es falso si ambos operandos son falsos.</li>
+<li><strong>Exclusive OR</strong> solo es verdadero si los operandos son diferentes.
+  Finalmente, se presentan los operadores condicionales, <strong>&amp;&amp;</strong> y <strong>||</strong>, que a menudo se conocen como
+  operadores de cortocircuito. Los operadores de cortocircuito son casi idénticos a los operadores lógicos, <strong>&amp;</strong> y <strong>|</strong>, respectivamente, excepto que el lado derecho de la expresión nunca puede ser evaluado si el resultado final puede ser determinado por el lado izquierdo de la expresión. Por ejemplo, si se considera la siguiente declaración:
+<div class="highlight"><pre><span></span><code>boolean x = true || (y &lt; 4);
+</code></pre></div>
+En referencia a las tablas de verdad, el valor x solo puede ser falso si ambos lados de la expresión son
+falsas. Como sabemos que el lado izquierdo es verdadero, no hay necesidad de evaluar el lado derecho,
+ya que nada hará que el valor de x sea diferente de verdadero. Para ilustrar este concepto prueba a
+ejecutar la línea de código anterior para varios valores de y.
+El ejemplo más común de dónde se usan los operadores de cortocircuito es la comprobación de objetos
+nulos antes de realizar una operación, como esta:
+<div class="highlight"><pre><span></span><code>if(x != null &amp;&amp; x.getValue() &lt; 5) {
+// Do something
+}
+</code></pre></div>
+En este ejemplo, si x fuera nulo, entonces el cortocircuito evita lanzar una excepción
+NullPointerException, ya que la evaluación de x.getValue () &lt;5 nunca se alcanza. Alternativamente, si
+usamos un &amp; lógico, entonces ambos lados siempre se evaluarán y cuando x fuese nulo esto arrojaría
+una excepción:
+<div class="highlight"><pre><span></span><code>if(x != null &amp; x.getValue() &lt; 5) { 
+// Throws an exception if x is null
+// Do something
+}
+</code></pre></div>
+¿Cuál es el resultado del siguiente código?
+<div class="highlight"><pre><span></span><code>int x = 6;
+
+boolean y = (x &gt;= 6) || (++x &lt;= 7);
+
+System.out.println(x);
+</code></pre></div>
+Como <strong>x &gt;= 6</strong> es verdadero, el operador de incremento en el lado derecho de la expresión nunca se
+evalúa, por lo que la salida es <strong>6</strong>.</li>
+</ul>
+<h3 id="446-operadores-de-igualdad">4.4.6. Operadores de igualdad</h3>
+<p>La determinación de la igualdad en Java puede no ser trivial, ya que hay una diferencia semántica entre
+"dos objetos son lo mismo" y "dos objetos son equivalentes". Es aún más complicado por el hecho de
+que para tipos primitivos numéricos (entre los que se incluye también el tipo de dato char) y booleanos,
+no existe tal distinción.
+Comenzando por lo más sencillo: el operador de igualdad (==) y el operador de desigualdad (!=). Como
+los operadores relacionales, comparan dos operandos y devuelven un valor booleano si las expresiones
+o valores son iguales o no iguales, respectivamente.
+Los operadores de igualdad se utilizan en uno de tres casos:</p>
+<ol>
+<li>Comparando dos tipos primitivos numéricos. Si los valores numéricos son de diferente tipo de
+   datos, los valores se transforman automáticamente como se describió anteriormente. <br />
+     Por   ejemplo, <strong>5 == 5.00</strong> devuelve verdadero ya que el lado izquierdo se transforma a un double.</li>
+<li>Comparando dos valores booleanos.</li>
+<li>Comparando dos objetos, incluidos los valores nulos y String.
+   Las comparaciones para la igualdad se limitan a estos tres casos, por lo que no se pueden mezclar tipos.<br />
+     Por ejemplo, cada uno de los siguientes devolvería en un error del compilador:
+<div class="highlight"><pre><span></span><code>   boolean x = true == 3; // DOES NOT COMPILE boolean
+
+   y = false != &quot;Giraffe&quot;; // DOES NOT COMPILE boolean
+
+   z = 3 == &quot;Kangaroo&quot;; // DOES NOT COMPILE
+</code></pre></div></li>
+</ol>
+<p>Si se observa el siguiente fragmento:</p>
+<p><div class="highlight"><pre><span></span><code>boolean y = false; 
+
+boolean x = (y = true);
+
+System.out.println(x); // Outputs true
+</code></pre></div>
+A primera vista, se podría pensar que la salida debería ser falsa, y si la expresión fuese (y == true), se tendría razón. En este ejemplo, sin embargo, la expresión está asignando el valor true a y, y como se vio en la sección de operadores de asignación, la asignación misma tiene el valor de la asignación. Por lo tanto, la salida sería verdadera.</p>
+<p>Para la comparación de objetos, el operador de igualdad se aplica a las referencias a estos objetos, no a los objetos a los que apuntan. Dos referencias son iguales si y solo si apuntan a lo mismo objeto, o
+ambos apuntan a nulo. Si se ven algunos ejemplos se entenderá mejor:
+<div class="highlight"><pre><span></span><code>File x = new File(&quot;myFile.txt&quot;);
+
+File y = new File(&quot;myFile.txt&quot;);
+
+File z = x;
+
+System.out.println(x == y); // Outputs false
+
+System.out.println(x == z); // Outputs true
+</code></pre></div>
+Aunque todas las variables apuntan a la misma información de archivo, solo dos, x y z, son iguales en
+términos de <strong>==</strong>.<br />
+En el <em>Capítulo 3</em>, <strong>"Core Java APIs"</strong>, se continuará la discusión sobre la igualdad de objetos introduciendo lo que significa que dos objetos diferentes sean equivalentes. También se tratará la igualdad de los String y se mostrará cómo este puede ser un tema no trivial.</p>
+<h2 id="45-comprender-las-sentencias-de-java">4.5. Comprender las sentencias de Java</h2>
+<p>Los operadores Java permiten crear muchas expresiones complejas, pero están limitadas en la manera
+en que pueden controlar el flujo del programa. Por ejemplo, imaginar que se quiere una sección de código
+que solo sea ejecutado bajo ciertas condiciones que no pueden ser evaluadas hasta que no se ejecute.
+O si se desea que un segmento particular de código se repita una vez por cada elemento en alguna lista.
+Como se dijo en el Capítulo 1, una declaración de Java es una unidad completa de ejecución en Java,
+terminando con un punto y una coma <strong>(;)</strong>. En el capítulo, se mostrarán varias declaraciones de control
+de flujo en Java. Las declaraciones de control de flujo rompen el flujo de ejecución mediante la toma de
+decisiones, el bucle y la ramificación, permitiendo que la aplicación seleccione segmentos particulares
+del código para ejecutar.<br />
+Las declaraciones se pueden aplicar a expresiones simples, o a un bloque de código. Un bloque de código
+en Java es un grupo de cero o más declaraciones entre llaves, <strong>({})</strong>, y se puede usar en cualquier lugar
+donde se permita usar una declaración simple.</p>
+<h3 id="451-if-then">4.5.1. if-then</h3>
+<p>De vez en cuando, solo se quiere ejecutar un bloque de código según ciertas condiciones. El if-then,
+como se muestra en el código siguiente, permite que la aplicación ejecute un bloque particular de código
+si y solo si una expresión booleana se evalúa como verdadera en tiempo de ejecución.
+<div class="highlight"><pre><span></span><code>if(booleanExpression){
+//Branch if true }
+</code></pre></div>
+Por ejemplo, si se tiene una función que utiliza la hora del día para mostrar un mensaje al usuario:
+<div class="highlight"><pre><span></span><code>if(hourOfDay &lt; 11)
+System.out.println(“Good Morning”);
+</code></pre></div>
+Si la hora es menor que 11 entonces la función mostrará el mensaje. Si se quisiera además incrementar
+algún valor, morningGreetingCount, cada vez que el mensaje se muestra se podría repetir la declaración
+if-then, pero Java permite escribirlo a continuación del output convirtiendo el código en un bloque:
+<div class="highlight"><pre><span></span><code>if(hourOfDay &lt; 11){
+System.out.println(“Good Morning”); 
+morningGreetingCount++;
+}
+</code></pre></div>
+El bloque permite que se ejecuten múltiples instrucciones basadas en la evaluación del if-then. Hay que
+tener en cuenta que la primera instrucción no contiene un bloque dentro de la sección de impresión, pero
+podría tenerlo. Para mejorar la legibilidad del código, se considera una buena práctica colocar los bloques
+dentro de las sentencias if-then, así como muchas otras sentencias de control de flujo, aunque no es
+obligatorio.
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+a. Sangría y llaves
+Echar un vistazo a esta forma ligeramente modificada del ejemplo:
+<div class="highlight"><pre><span></span><code>if(hourOfDay &lt; 11)
+System.out.println(&quot;Good Morning&quot;); 
+morningGreetingCount++;
+</code></pre></div>
+Si se observan las sangrías, se puede pensar que la variable morningGreetingCount solo se va a
+incrementar cuando la hora sea menor que 11, pero no es lo que hace el código. Mostrará el mensaje
+solo si la hora es menor que 11 pero incrementará el valor de la variable siempre. Recuerda que en Java
+los espacios en blanco no son considerados parte de la ejecución.</p>
+<h3 id="452-if-then-else">4.5.2. if-then-else</h3>
+<p>Se va a complicar el ejemplo anterior, ¿qué pasaría si se quisiera mostrar otro mensaje cuando la hora
+sea mayor o igual a 11?
+<div class="highlight"><pre><span></span><code>if(hourOfDay &lt; 11) {
+System.out.println(&quot;Good Morning&quot;);
+}
+
+if(hourOfDay &gt;= 11) {
+System.out.println(&quot;Good Afternoon&quot;);
+
+}
+</code></pre></div>
+Esto es un poco redundante, ya que estamos evaluando hourOfDay dos veces, y esto puede ser
+computacionalmente costoso. Java permite solucionar esto gracias a la sentencia if-then-else que se
+muestra en el siguiente código:
+<div class="highlight"><pre><span></span><code>if(booleanExpression){
+
+// Branch if true
+
+} else {
+
+// Branch if false
+}
+</code></pre></div>
+Veamos este ejemplo:
+<div class="highlight"><pre><span></span><code>if(hourOfDay &lt; 11) {
+
+System.out.println(&quot;Good Morning&quot;);
+
+} else {
+
+System.out.println(&quot;Good Afternoon&quot;);
+}
+</code></pre></div>
+Ahora el código se está ramificando entre una de las dos opciones posibles, con la evaluación booleana
+solo una vez. El operador else utiliza una declaración o un bloque, de la misma manera que la sentencia
+if. De esta manera, se puede agregar declaraciones if-then adicionales a un bloque else para llegar a un
+ejemplo más refinado:
+<div class="highlight"><pre><span></span><code>if(hourOfDay &lt; 11) {
+
+System.out.println(&quot;Good Morning&quot;);
+
+    }else if(hourOfDay &lt; 15) {
+
+    System.out.println(&quot;Good Afternoon&quot;);
+
+    }else{
+
+System.out.println(&quot;Good Evening&quot;);
+}
+</code></pre></div>
+En este ejemplo, el proceso de Java continuará la ejecución hasta que encuentre un if-then que se evalúe
+como verdadero. Si ninguna de las dos primeras expresiones es verdadera, se ejecutará el código del
+bloque else del final. Una cosa a tener en cuenta al crear complejas declaraciones if-then-else es que el
+orden es importante. Por ejemplo, si se reordena el fragmento de código anterior de la siguiente manera:
+<div class="highlight"><pre><span></span><code>if(hourOfDay &lt; 15) {
+
+System.out.println(&quot;Good Afternoon&quot;);
+
+    } else if(hourOfDay &lt; 11) {
+
+        System.out.println(&quot;Good Morning&quot;); // UNREACHABLE CODE
+
+    } else {
+
+System.out.println(&quot;Good Evening&quot;);
+}
+</code></pre></div>
+Para horas menores que 11, este código se comporta de forma diferente al anterior. Si un valor es menor
+que 11, será también menor que 15. Por lo tanto, si se puede alcanzar la segunda rama en el ejemplo,
+también se puede alcanzar la primera rama. Ya que la ejecución de cada rama es excluyente, solo una
+rama se puede ejecutar, si se ejecuta la primera rama no se podrá ejecutar la segunda.
+Por lo tanto, no hay forma de que la segunda rama se ejecute alguna vez, y el código se considera
+inalcanzable.</p>
+<p>a. Verificando si la sentencia if se evalúa en una expresión booleana
+Echar un vistazo a las siguientes líneas de código:
+<div class="highlight"><pre><span></span><code>int x = 1; 
+if(x) { 
+// DOES NOT COMPILE ...
+}
+</code></pre></div>
+Esta declaración puede ser válida en algunos otros lenguajes de programación y scripting, pero no en
+Java, donde 0 y 1 no se consideran valores booleanos. Además, hay que tener cuidado con los operadores
+de asignación que se utilizan como si fueran operadores iguales (==) en declaraciones if-then:
+<div class="highlight"><pre><span></span><code>int x = 1; if(x = 5) { // DOES NOT COMPILE ...
+}
+</code></pre></div></p>
+<h3 id="453-operador-ternario">4.5.3. Operador Ternario</h3>
+<p>Ahora que se ha visto las declaraciones if-then-else, se puede volver brevemente a la discusión de los
+operadores y presentar al último operador. El operador condicional,? :, también conocido como operador
+ternario, es el único operador que utiliza tres operandos y tiene la forma:
+booleanExpression? expression1 : expression2</p>
+<p>El primer operando debe ser una expresión booleana, y el segundo y el tercero pueden ser cualquier
+expresión que devuelva un valor. La operación ternaria es realmente una forma condensada de un ifthen-
+else que devuelve un valor. Por ejemplo, los siguientes dos fragmentos de código son equivalentes:
+<div class="highlight"><pre><span></span><code>int y = 10;
+final int x;
+if(y &gt; 5) {
+x = 2 * y; }
+else { x =
+3 * y; }
+</code></pre></div>
+Comparar el código anterior con el siguiente código equivalente con el operador ternario:
+<div class="highlight"><pre><span></span><code>int y = 10;
+int x = (y &gt; 5)? (2 * y) : (3 * y);
+</code></pre></div>
+Tener en cuenta que a menudo es útil para la legibilidad agregar paréntesis alrededor de las expresiones
+en operaciones ternarias, aunque no es necesario.
+No es necesario que la segunda y tercera expresiones tengan los mismos tipos de datos, aunque puede
+entrar en juego cuando se combina con la asignación operador. Comparar las siguientes dos
+afirmaciones:
+<div class="highlight"><pre><span></span><code>System.out.println((y &gt; 5)? 21 : &quot;Zebra&quot;);
+int animal = (y &lt; 91)? 9 : &quot;Horse&quot;; // DOES NOT COMPILE
+</code></pre></div>
+Ambas expresiones evalúan valores booleanos similares y devuelven un int y un String, aunque solo se
+compilará la primera línea. El System.out.println () no se preocupa de que las sentencias sean de tipos
+completamente diferentes, ya que pueden convertir ambos a String. Por otro lado, el compilador sabe
+que "Horse" es de un tipo de datos incorrecto y no puede ser asignado a un int; por lo tanto, no permitirá
+que se compile el código.</p>
+<p>a. Evaluación de las expresiones ternarias
+A partir de Java 7, solo una de las expresiones de la derecha del operador ternario será evaluado en
+tiempo de ejecución. De manera similar a los operadores de cortocircuito, si una de las dos expresiones
+de la derecha del operador ternario realiza un efecto secundario, entonces no se puede aplicar en tiempo
+de ejecución. Vamos a ilustrar este principio con el siguiente ejemplo:
+int y = 1;
+int z = 1;
+final int x = y&lt;10? y++ : z++;
+System.out.println(y+","+z); // Outputs 2,1
+Tener en cuenta que como la parte de la izquierda de la expresión es verdadera solo se incrementa y.
+Contrástar con el siguiente ejemplo:
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+int y = 1;
+int z = 1;
+final int x = y&gt;=10? y++ : z++;
+System.out.println(y+","+z); // Outputs 1,2
+Ahora que la expresión booleana de la izquierda se evalúa como falsa, solo z se incrementa. De esta
+manera, se ve cómo las expresiones en un operador ternario pueden no aplicarse si la expresión
+particular no se usa.
+<div class="highlight"><pre><span></span><code>### 4.5.4. switch
+</code></pre></div>
+Una sentencia switch, como se muestra en la Figura 2.4, es una estructura compleja de toma de
+decisiones en el que se evalúa un solo valor y el flujo se redirige a la primera rama correspondiente,
+conocida como “case”. Si no se encuentra dicha declaración de caso que coincida con el valor, una opción
+predeterminada será ejecutada. Si no hay tal opción predeterminada disponible, la totalidad de la
+sentencia switch será omitida.
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+a. Tipos de datos soportados
+Como se muestra en el siguiente código, una instrucción switch tiene una variable que se evalúa en
+tiempo de ejecución. Antes de Java 5.0, esta variable solo podía ser valores int o aquellos valores que
+podían ser transformados a int, de forma específica byte, short, char o int.
+Cuando se agregó “enum” en Java 5.0, se agregó el soporte para que los switch pudiesen admitir valores
+“enum”. En Java 7, las sentencias switch se actualizaron aún más para permitir los valores string.
+Finalmente, la sentencia switch es compatible con cualquiera de las clases primitivas de carácter
+numérico, como Byte, Short, Character o Integer.
+<div class="highlight"><pre><span></span><code>switch(variableToTest) { case
+constantExpression1: // Branch
+for case1; break; case
+constantExpression2: // Branch
+for case2; break;
+...
+
+default:
+}
+</code></pre></div>
+Tipos de datos soportados por la sentencia switch:
+<div class="highlight"><pre><span></span><code>- int y Integer
+- byte y Byte
+- short y Short
+- char y Character
+- String
+- Valores enum
+</code></pre></div>
+b. Valores constantes en tiempo de compilación
+Los valores de cada case deben ser del mismo tipo de dato que el valor introducido en el switch. Esto
+significa que solo se pueden utilizar literales, constantes enum o variables constantes finales del mismo
+tipo de datos.
+Ejemplo:
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+int dayOfWeek = 5;
+switch(dayOfWeek) {
+default:
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+System.out.println("Weekday");
+break; case 0:
+<div class="highlight"><pre><span></span><code>System.out.println(&quot;Sunday&quot;);
+break; case 6:
+System.out.println(&quot;Saturday&quot;);
+break;
+}
+Con el valor de dayOfWeek de 5 el código devolverá “Weekday”.
+Lo primero que se puede notar es que hay una sentencia break al final de cada case y la sección
+predeterminada(default). Se discutirá las sentencias break en detalle cuando se vean los bucles, pero
+por ahora, todo lo que se necesita saber es que finaliza la sentencia switch y el control de flujo vuelve a
+la sentencia adjunta. Como se verá pronto, si se omite la declaración del break, el flujo continuará hasta
+el siguiente caso en curso o bloque predeterminado.
+Otra cosa que se puede notar es que el bloque predeterminado no está al final del switch. No es un
+requisito que el caso o las declaraciones predeterminadas estén en un orden en particular, a menos que
+tenga vías que lleguen a múltiples secciones del bloque switch en una sola ejecución.
+Para ilustrar lo aprendido se considerará la siguiente variación:
+int dayOfWeek = 5;
+switch(dayOfWeek) {
+case 0:
+System.out.println(&quot;Sunday&quot;);
+default:
+System.out.println(&quot;Weekday&quot;); case
+6 :
+System.out.println(&quot;Saturday&quot;);
+break;
+}
+</code></pre></div>
+Este código se parece mucho al ejemplo anterior, excepto que dos de las declaraciones break han sido
+eliminadas y el orden ha cambiado. Esto significa que por el valor dado de dayOfWeek, 5, el código
+saltará al bloque predeterminado y luego ejecutará todos los case en orden hasta que encuentre una
+sentencia break o finalice la estructura.
+El orden de los case y del bloque predeterminado es importante ahora ya que dejando el bloque
+predeterminado al final del switch, este, solo devolverá una palabra. Si el valor de dayOfWeek fuese 6
+el switch devolvería “Saturday”.
+Aunque el bloque predeterminado estaba antes del bloque case, solo se ejecutó el bloque case. Si se
+recuerda la definición del bloque predeterminado, solo se ramificará si no ha coincidido el valor del caso
+con el valor del switch, independientemente de su posición dentro del switch.
+Por último, si el valor de dayOfWeek fuese 0, la salida mostraría:
+<div class="highlight"><pre><span></span><code>Sunday
+Weekday
+
+
+Saturday
+</code></pre></div>
+Tener en cuenta que, en este último ejemplo, se ejecuta el bloque predeterminado porque no hay una
+instrucción break al final de los bloques de case anteriores. Mientras el código no se ramifique hacia la
+sentencia predeterminada si hay un valor de case que coincida dentro de la declaración del switch, se
+ejecutará la instrucción predeterminada si se encuentra después de una declaración de case para la que
+no hay declaración de break.
+Conclusión, se acepta que el tipo de datos para las declaraciones de case, debe coincidir con el tipo de
+datos de la variable del switch. Como ya se discutió, el valor de la declaración de case también debe ser
+una constante literal, enum o una variable final. Por ejemplo, dada la siguiente instrucción switch,
+observar qué afirmaciones de case compilarán y cuales no:
+<div class="highlight"><pre><span></span><code>private int getSortOrder(String firstName, final String lastName) {
+String middleName = &quot;Patricia&quot;; final String suffix = &quot;JR&quot;; int
+id = 0; switch(firstName){ case &quot;Test&quot;: return 52;
+case middleName: // DOES NOT COMPILE id = 5;
+</code></pre></div>
+break; case suffix: id = 0;
+break; case lastName: // DOES NOT COMPILE id
+= 8; break; case 5: // DOES NOT COMPILE
+id = 7; break; case 'J': // DOES NOT COMPILE
+id = 10; break; case
+java.time.DayOfWeek.SUNDAY: // DOES NOT COMPILE
+id = 15; break;
+} return
+id;
+}
+La primera declaración de case compila sin problemas usando un String, y es un buen ejemplo de cómo
+una declaración de return, se puede usar para salir del switch. La segunda declaración de case no se
+compila porque middleName no es una variable final, a pesar de tener un valor conocido en esta línea
+de ejecución en particular. La tercera declaración compila sin problema porque suffix es una variable
+constante final.
+La cuarta declaración, aunque LastName sea final, no es una constante ya que se ha pasado a la función,
+por lo tanto, esta línea tampoco compila. Finalmente, los tres últimos case no compilan porque ninguno
+de ellos coincide con el tipo String de la variable del switch, el último es de tipo enum value.
+<div class="highlight"><pre><span></span><code>### 4.5.5. while
+</code></pre></div>
+Una estructura de control de repetición, también conocida como bucle, ejecuta el mismo código varias
+veces seguidas. Mediante el uso de variables no constantes, cada repetición de la sentencia puede ser
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+diferente. Por ejemplo, una declaración que se itera sobre una lista de nombres únicos y las salidas
+devolverán un nuevo nombre en cada ejecución del bucle.
+La estructura de control de repetición más simple en Java es la instrucción while, descrita en el siguiente
+código. Como todas las estructuras de control de repetición, tiene una condición de terminación,
+implementada como una expresión booleana, que continuará mientras la expresión se evalúe a true.
+<div class="highlight"><pre><span></span><code>while(booleanExpression){
+//Body
+}
+Como se muestra en el código, un bucle while es similar a las sentencias if-then ya que está compuesta
+por una expresión booleana e instrucciones o bloque de instrucciones. Durante la ejecución, la expresión
+booleana es evaluada antes de cada iteración del bucle y termina si la evaluación devuelve un false. Es
+importante darse cuenta que el bucle while puede terminar después de su primera evaluación de la
+expresión booleana. De esta forma el bloque de instrucciones puede no ejecutarse nunca.
+Si se vuelve al ejemplo de ratón del capítulo 3 y se muestra un bucle que puede ser utilizado para
+modelar un ratón comiendo una comida:
+</code></pre></div>
+int roomInBelly = 5; public void eatCheese(int
+bitesOfCheese) { while(bitesOfCheese &gt; 0 &amp;&amp;
+roomInBelly &gt; 0) { bitesOfCheese--;
+roomInBelly--;
+}
+System.out.println(bitesOfCheese+" pieces of cheese left"); }
+Este método coge una cantidad de comida, en este caso de queso, y continua hasta que el ratón no tenga
+más espacio en su estómago o no quede comida para comer. Con cada iteración del bucle, el ratón come
+un trozo de comida y pierde una parte del espacio en su estómago. Utilizando una sentencia booleana
+compuesta, nos aseguramos de que el bucle while pueda terminar por cualquiera de las condiciones.
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+a. Bucles infinitos
+Considerar el siguiente código:
+<div class="highlight"><pre><span></span><code>int x = 2; int
+y = 5; while(x
+&lt; 10) y++;
+</code></pre></div>
+Se puede observar un evidente problema con esta declaración: nunca acabará. La expresión booleana
+que se evalúa antes de cada iteración del bucle nunca se modifica por lo que la expresión (x &lt; 10)
+siempre será evaluada a true. El resultado es que el bucle nunca acabará creando lo que se conoce como
+bucle infinito.
+Los bucles infinitos son algo que se debe tener en cuenta al crear bucles. Se tiene que estar seguro de
+que el bucle termina bajo alguna condición. Primero comprobar que la variable del bucle se modifica.
+Luego, asegurarse que la condición de terminación se alcanza bajo cualquier circunstancia. Como se verá
+en “Entendiendo los flujos de control avanzados” de un bucle se puede salir también con otras condiciones
+como con la sentencia break.
+<div class="highlight"><pre><span></span><code>### 4.5.6. do-while
+</code></pre></div>
+Java también permite crear bucles do-while, que como al bucle while, es una estructura de control de
+repetición con una condición de terminación e instrucciones o bloques de instrucciones, como se muestra
+en el siguiente código. Al contrario que el bucle while, el bucle do-while garantiza que la instrucción o el
+bloque de instrucciones se ejecutará mínimo una vez.
+<div class="highlight"><pre><span></span><code>do{
+//Body
+}while(booleanExpression);
+La principal diferencia entre la estructura del do-while y del while es que ordena intencionadamente las
+instrucciones o los bloques de instrucciones antes de la expresión condicional, para recalcar que la
+instrucción será ejecutada antes de evaluar la expresión. Por ejemplo, mirar la salida del siguiente
+código:
+
+int x = 0;
+do {
+x++;
+}while(false);
+System.out.println(x); // Outputs 1
+Java ejecutará primero el bloque de instrucciones, y luego comprobará la condición del bucle. A pesar de
+que el bucle termina inmediatamente, el bloque de instrucciones se ejecuta una vez y el programa
+devuelve 1.
+</code></pre></div>
+a. Cuando usar bucles while o do-while
+En la práctica, puede ser difícil determinar cuándo se debe utilizar un bucle while y un bucle do-while.
+No importa cual se utilice ya que cualquier bucle while se puede convertir en un bucle do-while y
+viceversa. Comparar estos dos bucles:
+<div class="highlight"><pre><span></span><code>while(x &gt; 10)
+{ x--; }
+if(x &gt; 10) {
+do { x--;
+}while(x &gt; 10);
+}
+Aunque uno de los bucles es más fácil de leer, son funcionalmente iguales. Java recomienda utilizar los
+bucles while cuando no sea necesario ejecutar sus instrucciones, y utilizar los bucles do-while cuando
+sea imprescindible que se ejecute como mínimo una vez, pero, en la práctica, elegir entre uno u otro es
+algo personal.
+Por ejemplo, pese a que la primera declaración es más corta, la segunda tiene una ventaja que permite
+hacer uso de la sentencia if-then y realizar otras operaciones en la rama del else, como se muestra en
+el ejemplo:
+</code></pre></div>
+if(x &gt; 10) {
+do { x--
+;
+}while(x &gt; 10);
+}
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+else {
+x++;
+}
+<div class="highlight"><pre><span></span><code>### 4.5.7. La sentencia for
+</code></pre></div>
+Ahora se extenderá el conocimiento con otra estructura de control repetición llamada “for”. Existen dos
+tipos de sentencia for, la primera se refiere al bucle simple for, la segunda se llama for-each que es una
+mejora de la sentencia for.
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+a. La sentencia for simple
+Un bucle for simple tiene la misma condición booleana o bloque de instrucciones que los otros bucles que
+hemos visto, e incluye dos nuevas secciones: la inicialización y la actualización. El siguiente código
+muestra como estos componentes están organizados:
+<div class="highlight"><pre><span></span><code>for(initialization; booleanExpression; updateStatement) {
+// Body
+}
+
+El código puede parecer algo confusa y arbitraria al principio, la organización de los componentes y el
+flujo permite crear poderosas sentencias en poco espacio al contrario de otros bucles que necesitarían
+múltiples líneas. Fijarse que cada sección está separada por punto y coma (;) y la inicialización y la
+actualización pueden contener varias sentencias separadas por comas.
+Las variables creadas en el bloque de inicialización tienen un ámbito limitado y solo serán accesibles
+dentro del bucle for. Alternativamente, las variables declaradas antes del for y modificadas en el bloque
+de inicialización pueden ser utilizadas fuera del bucle for ya que su ámbito es anterior a la creación del
+bucle for.
+A continuación, este ejemplo imprime en pantalla los números del 0 al 9:
+for(int i = 0; i &lt; 10; i++) {
+System.out.print(i + &quot; &quot;);
+}
+</code></pre></div>
+La variable local i se inicializa a 0. Esta variable tiene un ámbito dentro del bucle y no es accesible desde
+fuera del bucle una vez el bucle haya terminado. Como en los bucles while, la expresión booleana es
+evaluada en cada iteración del bucle antes de que se ejecuten las instrucciones del este. Si devuelve un
+true, el bucle se ejecuta e imprime el 0 seguido de un espacio en blanco. Luego el bucle ejecuta el bloque
+de actualización, que en este caso incrementa el valor de i a 1. Entonces el bucle evalúa otra vez la
+expresión booleana y el proceso se repite varias veces, imprimiendo lo siguiente:
+<div class="highlight"><pre><span></span><code>0 1 2 3 4 5 6 7 8 9
+</code></pre></div>
+En la décima iteración del bucle, el valor de i alcanza el 9 y se incrementa a 10. En la undécima iteración
+del bucle la expresión booleana será evaluada a falso ya que 10 no es menor que 10, el bucle terminará
+sin ejecutar el bloque de instrucciones.
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+Ejemplos con los que familiarizarse:
+<div class="highlight"><pre><span></span><code>- Creación de un bucle infinito
+  for( ; ; ) {
+  System.out.println(&quot;Hello World&quot;);
+  }
+</code></pre></div>
+Puede parecer que este bucle for dará problemas de compilación, pero compilará y funcionará sin
+problemas. Es un bucle infinito que imprimirá el mismo mensaje repetidas veces. Este ejemplo refuerza
+la idea de que los componentes del bucle for son opcionales, y recuerda que el punto y coma que separa
+las secciones son necesarios, for() no compilará.
+<div class="highlight"><pre><span></span><code>- Adición de varios términos a la sentencia for
+
+int x = 0;
+for(long y = 0, z = 4; x &lt; 5 &amp;&amp; y &lt; 10; x++, y++) {
+System.out.print(y + &quot; &quot;);
+}
+System.out.print(x);
+</code></pre></div>
+Este código demuestra tres variaciones del bucle for que puede que aún no se hayan visto. Primero, se
+puede declarar una variable, como x en el ejemplo, antes de que el bucle empiece y usarla después de
+que termine. Segundo, el bloque de inicialización, la expresión booleana, y el bloque de actualización,
+pueden incluir variables extra que pueden no referenciarse entre ellas. Por ejemplo, z está definida en
+el bloque de inicialización y nunca se usa. Finalmente, el bloque de actualización puede modificar
+múltiples variables. El código imprimirá:
+<div class="highlight"><pre><span></span><code>0 1 2 3 4
+
+- Re-declarando una variable en el bloque de inicialización
+  int x = 0;
+  for(long y = 0, x = 4; x &lt; 5 &amp;&amp; y &lt; 10; x++, y++) { // DOES NOT COMPILE
+  System.out.print(x + &quot; &quot;);
+  }
+  Este ejemplo parece similar al anterior, pero no compila debido al bloque de inicialización. La diferencia
+  es que x se repite en el bloque de inicialización después de haber sido declarado ya antes del loop, dando
+  lugar a que el compilador se detenga debido a una declaración de variable duplicada. Se puede fijar este
+  bucle cambiando la declaración de x y y como sigue:
+  int x = 0; long
+  y = 10;
+  for(y = 0, x = 4; x &lt; 5 &amp;&amp; y &lt; 10; x++, y++) {
+  System.out.print(x + &quot; &quot;);
+  }
+  Tener en cuenta que esta variación si compilará porque el bloque de inicialización simplemente asigna
+  un valor a x y no lo declara.
+- Utilizando tipos de datos incompatibles en el bloque de inicialización
+  for(long y = 0, int x = 4; x &lt; 5 &amp;&amp; y&lt;10; x++, y++) { // DOES NOT COMPILE
+  System.out.print(x + &quot; &quot;);
+  }
+</code></pre></div>
+Este ejemplo también se parece mucho al segundo ejemplo, pero como en el tercer ejemplo no compilará,
+aunque esta vez por una razón diferente. Las variables del bloque de inicialización deben ser del mismo
+tipo. En el primer ejemplo, y y z eran ambos long, así que el código compilará sin problema, pero en
+este ejemplo tienen tipos diferentes, por lo que el código no se compilará.
+<div class="highlight"><pre><span></span><code>- Usando variables del bucle fuera de este
+  for(long y = 0, x = 4; x &lt; 5 &amp;&amp; y &lt; 10; x++, y++) {
+  System.out.print(y + &quot; &quot;);
+  }
+  System.out.print(x); // DOES NOT COMPILE
+</code></pre></div>
+La variación final del segundo ejemplo no compilará por una razón diferente a la de los ejemplos
+anteriores. Fijarse que x se define en el bloque de inicialización del bucle, y luego se usa después de que
+el bucle termine. Puesto que x sólo tiene ámbito para el bucle, usarlo fuera del bucle lanzará un error de
+compilación.
+<div class="highlight"><pre><span></span><code>### 4.5.8. La sentencia for-each
+</code></pre></div>
+A partir de Java 5.0, los desarrolladores han tenido una mejora para el bucle for a su disposición, uno
+específicamente diseñado para iterar sobre arrays y colección de objetos. Esto mejora el bucle for, que
+para mayor claridad se hará referencia a él como un bucle for-each, como se muestra en el siguiente
+código:
+<div class="highlight"><pre><span></span><code>for(datatype instance : collection){
+//Body
+}
+</code></pre></div>
+La declaración del bucle for-each está compuesta por una sección de inicialización y un objeto para
+utilizarlo repetidas veces. El lado derecho de la sentencia for-each debe ser un array o un objeto que
+implemente la clase Java.lang.Iterable, que incluye la mayor parte de los frameworks de Java Collections.
+El lado izquierdo del bucle for-each debe incluir una declaración para una instancia de una variable, cuyo
+tipo coincida con el tipo de un miembro del array o de la colección en el lado derecho de la sentencia.
+Ejemplos:
+<div class="highlight"><pre><span></span><code>final String[] names = new String[3]; names[0] = &quot;Lisa&quot;;
+names[1] = &quot;Kevin&quot;; names[2] = &quot;Roger&quot;; for(String name : names)
+{ System.out.print(name + &quot;, &quot;);
+}
+</code></pre></div>
+Este código compilará e imprimirá: Lisa, Kevin, Roger,
+<div class="highlight"><pre><span></span><code>java.util.List&lt;String&gt; values = new java.util.ArrayList&lt;String&gt;();
+values.add(&quot;Lisa&quot;); values.add(&quot;Kevin&quot;); values.add(&quot;Roger&quot;); for(String value
+: values) { System.out.print(value + &quot;, &quot;);
+}
+</code></pre></div>
+Este código compilará e imprimirá: Lisa, Kevin, Roger,
+<div class="highlight"><pre><span></span><code>String names = &quot;Lisa&quot;;
+for(String name : names) { // DOES NOT COMPILE
+System.out.print(name + &quot; &quot;);
+}
+
+En este ejemplo, el String names no es un array y no implementa la clase java.lang.iterable, así que el
+compilador lanzará una excepción ya que no sabe como iterar un String.
+String[] names = new String[3]; for(int name : names) { // DOES NOT COMPILE
+System.out.print(name + &quot; &quot;);
+}
+Este código no compilará porque en el lado izquierdo del bucle no se define una instancia de String.
+Nótese que, en este último ejemplo, el array se inicializa con tres valores de puntero cero. En sí mismo,
+eso no causará un fallo de compilación, sólo imprimirá tres veces cero.
+</code></pre></div>
+a. Comparación del bucle for y el bucle for-each
+Dado que for y for-each usan la misma palabra clave, es posible preguntarse cómo están relacionados.
+Tomar un momento para explorar cómo el compilador convierte cada for-each en bucles for.
+Cuando se introdujo el bucle for-each en Java 5, se agregó como una mejora de compilación. Esto
+significa que Java realmente convierte el bucle for-each en un bucle for estándar durante compilación.
+Por ejemplo, asumiendo que names es un array de String[] como se vio en la primera parte. Ejemplo,
+los dos bucles siguientes son equivalentes:
+<div class="highlight"><pre><span></span><code>for(String name : names) { System.out.print(name + &quot;, &quot;);
+}
+for(int i=0; i &lt; names.length; i++) {
+String name = names[i];
+System.out.print(name + &quot;, &quot;);
+}
+</code></pre></div>
+Para los objetos que heredan de Java.lang.iterable, hay una conversión diferente, pero similar. Por
+ejemplo, asumiendo que los valores son una instancia de List<Integer>, como vimos en el segundo caso
+ejemplo, los dos bucles siguientes son equivalentes:
+<div class="highlight"><pre><span></span><code>for(int value : values) { System.out.print(value + &quot;, &quot;);
+}
+for(java.util.Iterator&lt;Integer&gt; i = values.iterator(); i.hasNext(); ) { int value =
+i.next();
+System.out.print(value + &quot;, &quot;);
+}
+</code></pre></div>
+Observar que, en la segunda versión, no hay declaración de actualización ya que no se requiere cuando
+se usa la clase java.util.Iterator.
+Es posible que se haya notado que, en los ejemplos anteriores, había una coma extra impresa al final de
+la lista:
+<div class="highlight"><pre><span></span><code>Lisa, Kevin, Roger,
+</code></pre></div>
+Mientras que la declaración for-each es conveniente para trabajar con listas en muchos casos, oculta el
+acceso a la variable iterator del bucle. Si se quisiera imprimir sólo la coma entre nombres, se podría
+convertir el ejemplo en un bucle for estándar, como en el ejemplo siguiente:
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+java.util.List<String> names = new java.util.ArrayList<String>();
+names.add("Lisa"); names.add("Kevin"); names.add("Roger");
+for(int i=0; i<names.size(); i++) {
+String name = names.get(i);
+if(i>0) {
+System.out.print(", ");
+}
+System.out.print(name);
+}
+Este código de muestra produciría lo siguiente:
+<div class="highlight"><pre><span></span><code>Lisa, Kevin, Roger
+</code></pre></div>
+También es común utilizar un bucle for sobre un bucle for-each si se comparan múltiples elementos en
+un bucle dentro de una sola iteración, como en el ejemplo siguiente. Observar que se salta la ejecución
+del primer bucle, ya que el valor[-1] no está definido y arrojaría un IndexOutOfBoundsException error.
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+int[] values = new int[3];
+values[0] = 10; values[1] =
+new Integer(5); values[2] =
+15;
+for(int i=1; i&lt;values.length; i++) { System.out.print(values[i]-values[i-
+1]);
+}
+Este código devolverá lo siguiente:
+<div class="highlight"><pre><span></span><code>- 5, 10,
+</code></pre></div>
+A pesar de estos ejemplos, los bucles mejorados for-each son bastante útiles en Java en una gran
+variedad de circunstancias. Como desarrollador, sin embargo, siempre se puede volver a un for estándar
+si se necesita un control más fino.
+<div class="highlight"><pre><span></span><code>## 4.6. Comprendiendo el control de flujo avanzado
+</code></pre></div>
+Hasta ahora, se ha tratado con bucles simples que sólo terminaban cuando su expresión booleana es
+evaluada como falsa. Ahora se mostrará otras formas en la que los bucles podrían terminar, o ramificar,
+y se verá que el camino tomado durante el tiempo de ejecución puede no ser tan sencillo como en los
+ejemplos anteriores.
+<div class="highlight"><pre><span></span><code>### 4.6.1. Bucles anidados
+</code></pre></div>
+En primer lugar, los bucles pueden contener otros bucles. Por ejemplo, considerar el siguiente código
+que itera sobre una matriz bidimensional, una matriz que contiene otras matrices como sus miembros.
+Se cubrirá los arreglos multidimensionales en detalle en el Capítulo 3, pero por ahora se supondrá que
+la siguiente es la forma de declarar un arreglo bidimensional.
+<div class="highlight"><pre><span></span><code>int[][] myComplexArray = {{5,2,1,3},{3,9,8,9},{5,7,12,7}}; for(int[] mySimpleArray :
+myComplexArray) { for(int i=0; i&lt;mySimpleArray.length; i++) {
+System.out.print(mySimpleArray[i]+&quot;\t&quot;);
+}
+System.out.println();
+}
+</code></pre></div>
+Nótese que en este ejemplo se mezcla intencionalmente un bucle for y uno for-each. Los bucles externos
+se ejecutarán un total de tres veces. Cada vez que se ejecuta el bucle exterior, el bucle interior se
+ejecutará cuatro veces. Cuando se ejecuta este código, se ve la siguiente salida:
+<div class="highlight"><pre><span></span><code>5 2 1 3
+3 9 8 9
+5 7 12 7
+</code></pre></div>
+Los bucles anidados pueden incluir bucles while y do-while, como se muestra en este ejemplo. Ver si se
+puede determinar lo que este código saldrá.
+<div class="highlight"><pre><span></span><code>int x = 20;
+while(x&gt;0) {
+do { x -=
+2 }while
+(x&gt;5); x--;
+System.out.print(x+&quot;\t&quot;);
+}
+La primera vez que este bucle se ejecuta, el bucle interno se repite hasta que el valor de x es 4. El valor
+será entonces decrementado a 3 y será la salida, al final de la primera iteración del bucle exterior. En la
+segunda iteración del bucle exterior, el do-while interno se ejecutará una vez, aunque x no sea mayor
+que 5. Recordar que las sentencias do-while siempre se ejecutan al menos una vez. Esto reducirá el valor
+a 1, que será decrementado aún más por el operador de decremento en el bucle exterior a 0. Una vez
+que el valor alcance 0, el bucle externo se termina. El resultado es que el código emitirá lo siguiente:
+3 0
+
+### 4.6.2. Añadiendo etiquetas opcionales
+</code></pre></div>
+Una cosa que se omite cuando se presentan las sentencias if-then, las sentencias switch y bucles es que
+todos ellos pueden tener etiquetas opcionales. Una etiqueta es un puntero opcional a la cabeza de una
+instrucción que permite a la aplicación saltar a ella o acabar. Es una sola palabra que procede de dos
+puntos (:). Por ejemplo, se puede añadir etiquetas opcionales a uno de los ejemplos anteriores:
+<div class="highlight"><pre><span></span><code>int[][] myComplexArray = {{5,2,1,3},{3,9,8,9},{5,7,12,7}}; OUTER_LOOP: for(int[]
+mySimpleArray : myComplexArray) {
+INNER_LOOP: for(int i=0; i&lt;mySimpleArray.length; i++) {
+
+
+System.out.print(mySimpleArray[i]+&quot;\t&quot;);
+}
+System.out.println();
+}
+</code></pre></div>
+Cuando se trata de un solo bucle, no añaden ningún valor, pero como se verá en la siguiente sección,
+son extremadamente útiles en entornos anidados. Las etiquetas opcionales a menudo sólo se utilizan en
+estructuras de bucle. Dicho esto, rara vez se considera una buena práctica de codificación hacerlo.
+Las etiquetas siguen las mismas reglas para los identificadores. En cuanto a la legibilidad, se expresan
+comúnmente en mayúsculas, con barra baja entre palabras, para distinguirlas de las variables regulares.
+<div class="highlight"><pre><span></span><code>### 4.6.3. La declaración break
+</code></pre></div>
+Como se vio al trabajar con las sentencia switch, una declaración break transfiere el flujo de control a
+la declaración adjunta. Lo mismo es válido para las sentencias break que aparecen dentro de bucles
+while, do-while, y bucles for, ya que terminaran el bucle temprano, como se muestra en el siguiente
+código:
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+optionalLabel: while(booleanExpression) {
+//
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+Body
+//
+Somewhere in loop
+break optionalLabel;
+}
+Observar en el código que la sentencia break puede tomar un parámetro opcional de etiqueta. Sin un
+parámetro de etiqueta, la sentencia break terminará el bucle interno más cercano que esté ejecutando
+actualmente. El parámetro de etiqueta opcional permite salir de un bucle exterior de nivel superior. En
+el siguiente ejemplo, se busca la primera posición del índice de matriz (x, y) de un número dentro de
+una matriz bidimensional no clasificada:
+<div class="highlight"><pre><span></span><code>public class SearchSample { public static
+void main(String[] args) { int[][] list =
+{{1,13,5},{1,2,5},{2,7,2}};
+</code></pre></div>
+int searchValue = 2;
+int positionX = -1; int
+positionY = -1;
+PARENT_LOOP: for(int i=0; i&lt;list.length; i++)
+{ for(int j=0; j&lt;list[i].length; j++) {
+if(list[i][j]==searchValue){ positionX =
+i; positionY = j; break
+PARENT_LOOP;
+}
+}
+}
+if(positionX==-1 || positionY==-1) {
+System.out.println("Value "+searchValue+" not found");
+} else {
+System.out.println("Value "+searchValue+" found at: " +
+"("+positionX+","+positionY+
+")");
+}
+}
+}
+Cuando se ejecute, este código saldrá:
+<div class="highlight"><pre><span></span><code>Value 2 found at: (1,1)
+</code></pre></div>
+En particular, échese un vistazo a la sentencia break PARENT_LOOP. Esta declaración romperá de toda
+la estructura del bucle tan pronto como se encuentre el primer valor que se ajuste. Ahora, imaginar lo
+que pasaría si se reemplazara el cuerpo del bucle interno por el siguiente:
+<div class="highlight"><pre><span></span><code>if(list[i][j]==searchValue) { positionX = i; positionY =
+j; break;
+}
+
+¿Cómo cambiaría esto la salida? En lugar de salir cuando se encuentra el primer valor que coincida, el
+programa sólo saldrá del bucle interno cuando se cumpla la condición. En otras palabras, la estructura
+ahora encontrará el primer valor que se ajuste del último bucle interno que contenga el valor, resultando
+en la siguiente salida:
+Value 2 found at: (2,0)
+</code></pre></div>
+Finalmente, ¿qué tal si se elimina el break por completo?
+<div class="highlight"><pre><span></span><code>if(list[i][j]==searchValue) {
+positionX = i;
+positionY = j;
+}
+</code></pre></div>
+En este caso, el código buscará el último valor de toda la estructura que tenga el valor equivalente. La
+salida se verá así:
+<div class="highlight"><pre><span></span><code>Value 2 found at: (2,2)
+</code></pre></div>
+Se puede ver en este ejemplo que el uso de una etiqueta en una sentencia break en un bucle anidado,
+o el no uso de la sentencia break en absoluto, puede hacer que el bucle se comporte de forma muy
+diferente.
+<div class="highlight"><pre><span></span><code>### 4.6.4. La sentencia continue
+</code></pre></div>
+Se completará ahora la discusión sobre el control avanzado del bucle con la sentencia continue, una
+declaración que causa que el flujo de datos finalice la ejecución del bucle actual, como se muestra en el
+siguiente código:
+<div class="highlight"><pre><span></span><code>Se puede notar que la sintaxis de la declaración continue refleja la declaración break. De hecho, las
+sentencias son similares en cuanto a su uso, pero con resultados diferentes. Mientras que la sentencia
+break transfiere el control a la sentencia adjunta, la sentencia continue transfiere el control a la expresión
+booleana que determina si el bucle debe continuar. En otras palabras, termina la iteración actual del
+bucle. También, al igual que la declaración break, la declaración continue se aplica al bucle interno más
+cercano en ejecución usando instrucciones de etiqueta opcionales para anular este comportamiento.
+Ejemplo:
+public class SwitchSample {
+public static void main(String[] args) {
+FIRST_CHAR_LOOP: for (int a = 1; a &lt;= 4; a++) { for (char x = &#39;a&#39;; x &lt;= &#39;c&#39;; x++)
+{ if (a == 2 || x == &#39;b&#39;) continue FIRST_CHAR_LOOP;
+System.out.print(&quot; &quot; + a + x);
+}
+}
+}
+}
+</code></pre></div>
+Con la estructura definida, el bucle devolverá el control al bucle padre cada vez que el primer valor sea
+2 o el segundo valor sea b. Esto resulta en una ejecución del bucle interno para cada una de las tres
+llamadas del bucle exterior. La salida se ve así:
+<div class="highlight"><pre><span></span><code>1a 3a 4a
+</code></pre></div>
+Ahora, imaginar que se elimina la etiqueta FIRST_CHAR_LOOP en la declaración continue para que el
+control sea devuelto al bucle interno en vez del externo. Mirar cómo cambiará la salida:
+<div class="highlight"><pre><span></span><code>1a 1c 3a 3c 4a 4c
+</code></pre></div>
+optionalLabel: while(booleanExpression) {
+//
+Body
+//
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+Somewhere in loop
+continue optionalLabel;
+}
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+Por último, si se elimina la sentencia continue y la sentencia if-then asociada a ésta, se llega a una
+estructura que produce todos los valores, tales como:
+<div class="highlight"><pre><span></span><code>1a 1b 1c 2a 2b 2c 3a 3b 3c 4a 4b 4c
+</code></pre></div>
+La siguiente tabla ayudará a recordar cuando se permiten etiquetas, break, y sentencias continue en
+Java. Aunque para fines ilustrativos los ejemplos han incluido el uso de estas sentencias en bucles
+anidados, también se pueden usar dentro de bucles simples.
+<div class="highlight"><pre><span></span><code>(^) Permite etiquetas
+opcionales
+Permite
+sentencias break
+Permite
+sentencias
+continue
+if Si No No
+while Si Si Si
+do while Si Si Si
+for Si Si Si
+switch Si Si No
+
+### 4.6.1. Resumen
+</code></pre></div>
+En este capítulo, se ha visto que:
+Entender los operadores de Java
+<div class="highlight"><pre><span></span><code>- Cómo utilizar todos los operadores Java requeridos que se describen.
+- Saber cómo influye la precedencia del operador en la forma en que se interpreta una expresión
+  determinada.
+</code></pre></div>
+Usando operadores binarios
+<div class="highlight"><pre><span></span><code>- Los operadores de asignación son operadores binarios que modifican la variable con el valor del lado
+  derecho de la ecuación.
+- El “casting” es necesario siempre que se pase de un dato numérico más grande a un tipo de datos
+  numéricos más pequeños, o la conversión de un número float a un valor int.
+- Los operadores complejos son operadores de asignación con una operación aritmética o lógica
+  incorporada que se aplican de izquierda a derecha de la expresión y almacena el valor resultante en la
+  variable de la parte izquierda de la pantalla.
+- Los operadores relacionales son aquellos que comparan dos expresiones y devuelven un valor booleano.
+    - Los operadores lógicos, (&amp;), (|) y (^), se pueden aplicar a datos de tipo numéricos y booleanos.
+- Los operadores de igualdad comparan dos operandos y devuelven un valor booleano si las expresiones
+  o valores son iguales, o no iguales, respectivamente.
+</code></pre></div>
+Comprender las sentencias de Java
+<div class="highlight"><pre><span></span><code>- Las estructuras de control: las estructuras de control de la toma de decisiones, incluidas las de tipo
+  ifthen, if-then-else y switch, así como las estructuras de control de la repetición, incluidas for, for-each,
+  while y do-while.
+
+
+- La mayoría de estas estructuras requieren la evaluación de una expresión booleana en particular, ya
+  sea para las decisiones de ramificación o una vez por repetición.
+- La sentencia switch es la única que soporta una variedad de tipos de datos, incluyendo variables String
+  a partir de Java 7.
+- Con un for-each no es necesario escribir explícitamente una expresión booleana, ya que el compilador
+  las construye implícitamente. Para mayor claridad, se refiere a un bucle for mejorado como un bucle
+  foreach, pero sintácticamente están escritos como una declaración for.
+</code></pre></div>
+Comprendiendo el control de flujo avanzado
+```
+- Los bucles pueden contener otros bucles, incluidos bucles while y do-while.
+- Una etiqueta es un puntero opcional a la cabeza de una instrucción que permite a la aplicación saltar a
+  ella o acabar.
+- Cómo se puede mejorar el flujo a través de los bucles anidados, de sentencias break y de sentencias
+  continue.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../bloques_basicos/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Bloques básicos en Java
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../api/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                API de Java
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

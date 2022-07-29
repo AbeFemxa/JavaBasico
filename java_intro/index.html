@@ -1,0 +1,595 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../img/favicon/favicon.ico">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-6.2.8">
+    
+    
+      
+        <title>Java - Curso Básico Java</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.cb6bc1d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.39b8e14a.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-java" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Curso Básico Java" class="md-header-nav__button md-logo" aria-label="Curso Básico Java">
+      
+  <img src="../img/logo/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            Curso Básico Java
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              Java
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Curso Básico Java" class="md-nav__button md-logo" aria-label="Curso Básico Java">
+      
+  <img src="../img/logo/logo.png" alt="logo">
+
+    </a>
+    Curso Básico Java
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+      
+      <label class="md-nav__link" for="nav-1">
+        Bloque Java Básico
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Bloque Java Básico" data-md-level="1">
+        <label class="md-nav__title" for="nav-1">
+          <span class="md-nav__icon md-icon"></span>
+          Bloque Java Básico
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Índice de contenido
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Java
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Java
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-historia-de-java" class="md-nav__link">
+    1.1. Historia de Java
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-la-maquina-virtual-java" class="md-nav__link">
+    1.2. La Máquina Virtual Java
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-el-lenguaje-java" class="md-nav__link">
+    1.3. El lenguaje Java
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entorno/" class="md-nav__link">
+        Entorno de desarrollo
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bloques_basicos/" class="md-nav__link">
+        Bloques básicos en Java
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operaciones_sentencias/" class="md-nav__link">
+        Operaciones y Sentencias
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        API de Java
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metodos_encapsulamiento/" class="md-nav__link">
+        Métodos y encapsulamiento
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dise%C3%B1o_clases/" class="md-nav__link">
+        Diseño de clases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../excepciones/" class="md-nav__link">
+        Excepciones
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-historia-de-java" class="md-nav__link">
+    1.1. Historia de Java
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-la-maquina-virtual-java" class="md-nav__link">
+    1.2. La Máquina Virtual Java
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-el-lenguaje-java" class="md-nav__link">
+    1.3. El lenguaje Java
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="1-java">1. Java</h1>
+<h2 id="11-historia-de-java">1.1. Historia de Java</h2>
+<p>Para hablar de la historia de java, hay que remontarse a los años 80, donde C podía considerarse el
+lenguaje por antonomasia. Era un lenguaje versátil, que podía actuar a bajo nivel y resolvían problemas
+muy complejos. Era la cima de la programación estructurada, para resolver estos complejos algoritmos,
+se generaban grandes procedimientos con un código muy complicado de mantener a largo plazo. Por ello
+empezó a surgir como alternativa la programación orientada a objetos, y con ella nació C++.
+El objetivo de java era crear un lenguaje de programación parecido a C++ en estructura y sintaxis,
+fuertemente orientado a objetos, pero con una máquina virtual propia. Esto se hizo bajo el principio, de
+poder ser usado bajo cualquier arquitectura "Write Once, Run Anywhere (escríbelo una vez, ejecútalo en
+cualquier sitio)".  </p>
+<p>En 1992 se presenta el proyecto, con los prototipos a bajo nivel. Entre 1993 y 1994 se trabaja para poder
+presentar un prototipo funcional (hotJava) donde se ve todo el potencial que JAVA puede ofrecer
+En 1995 finalmente, es presentada la versión alpha de java, y un año después en 1996 es lanzado el
+primer JDK (JDK 1.0): software que provee herramientas de desarrollo para la creación de programas
+en java. El desarrollo de java a partir de entonces es imparable, se van presentando nuevos paquetes y
+librerías hasta la actualidad.  </p>
+<p>A día de hoy, se puede decir, que Java es uno de los lenguajes más importantes del mundo. Con una
+comunidad extendida en todos los componentes y más de 4 millones de desarrolladores, existen millones
+de dispositivos que lo usan. Además, tras el surgimiento de android, java es establecido como el lenguaje
+de programación para móviles más extendido del planeta.  </p>
+<p>En las primeras versiones de Java 1.1, 1.2 y 1.3 es donde el lenguaje va tomando forma, con la inclusión
+de tecnologías como JavaBeans, JDBC para el acceso a base de datos, RMI para las invocaciones en
+remoto, Collections para la gestión de múltiples estructuras de datos o AWT para el desarrollo gráfico,
+entre otros.  </p>
+<p>Una de las cosas que sucede en noviembre 2006 es que Sun Microsystems lo convierte en Open Source
+mediante una licencia GNU General Public License (GPL). Dando lugar en mayo de 2008 a lo que se
+conoce como OpenJDK, con OpenJDK 6.  </p>
+<p>Llegado julio de 2011 ve la luz Java 7, la cual trae como novedades el soporte de lenguajes dinámicos,
+dotando a la JVM de un soporte de mútiples lenguajes y una nueva librería I/O para el manejo de ficheros.
+También aparecen cosas menores, pero muy útiles como el manejo de String, dentro de la validación en
+una estructura switch, o la capacidad de poner guiones de subrayado como separadores de miles en los
+números para facilitar su lectura (p. ej. 1_000_000).  </p>
+<p>La última versión de Java distribuida es Java 8, aparecida en marzo de 2014. Entre las características de
+Java 8 se tiene el soporte para expresiones Lambda y uso de Streams, que permiten un estilo más similar
+a la programación funcional para los programas Java. Dentro de este enfoque más cercano a la
+programación funcional, también aparecen las transformaciones MapReduce. Ve la luz el Proyecto
+Nashorn para disponer de un engine Javascript y así poder incluir este lenguaje dentro de las aplicaciones
+Java. Otras cosas son un nuevo API Date y Time y la inclusión de JavaFX 8 dentro de la JDK de Java.</p>
+<h2 id="12-la-maquina-virtual-java">1.2. La Máquina Virtual Java</h2>
+<p>El lenguaje Java es a la vez compilado e interpretado. Con el compilador, se convierte el código fuente
+que reside en archivos cuya extensión es .java, a un conjunto de instrucciones que recibe el nombre de
+bytecodes, que se guardan en un archivo cuya extensión es .class. Estas instrucciones son
+independientes del tipo de ordenador. El intérprete ejecuta cada una de estas instrucciones en un
+ordenador específico (Windows, Macintosh, etc). Solamente es necesario, por tanto, compilar una vez el
+programa, pero se interpreta cada vez que se ejecuta en un ordenador.
+<img alt="imagen mav java" src="/img/img_mv_java.jpg" /></p>
+<p>Cada intérprete Java es una implementación de la Máquina Virtual Java (JVM). Los bytecodes posibilitan
+el objetivo de "write once, run anywhere", de escribir el programa una vez y que se pueda ejecutar en
+cualquier plataforma que disponga de una implementación de la JVM. Por ejemplo, el mismo programa
+Java puede ejecutarse en Windows 98, Solaris, Macintosh, etc.
+Java es, por tanto, algo más que un lenguaje, ya que la palabra Java se refiere a dos cosas inseparables:
+el lenguaje que nos sirve para crear programas y la Máquina Virtual Java que sirve para ejecutarlos.
+Como se puede ver en la figura, el API de Java y la Máquina Virtual Java forman una capa intermedia
+(Java platform) que aísla el programa Java de las especificidades del hardware (hardware-based
+platform).
+<img alt="imagen capas java" src="/img/img_layer_java.jpg" />
+La Máquina Virtual Java (JVM) es el entorno en el que se ejecutan los programas Java. Su misión principal
+es la de garantizar la portabilidad de las aplicaciones Java. Define esencialmente un ordenador abstracto
+y especifica las instrucciones (bytecodes) que este ordenador puede ejecutar. El intérprete Java
+específico ejecuta las instrucciones que se guardan en los archivos cuya extensión es .class. Las tareas
+principales de la JVM son las siguientes:</p>
+<ul>
+<li>
+<p>Reservar espacio en memoria para los objetos creados</p>
+</li>
+<li>
+<p>Liberar la memoria no usada (garbage collection)</p>
+</li>
+<li>Asignar variables a registros y pilas</li>
+<li>Llamar al sistema huésped para ciertas funciones, como los accesos a los dispositivos</li>
+<li>Vigilar el cumplimiento de las normas de seguridad de las aplicaciones Java
+  Esta última tarea, es una de las más importantes que realiza la JVM. Además, las propias especificaciones
+  del lenguaje Java contribuyen extraordinariamente a este objetivo:</li>
+<li>Las referencias a arrays son verificadas en el momento de la ejecución del programa</li>
+<li>No hay manera de manipular de forma directa los punteros</li>
+<li>La JVM gestiona automáticamente el uso de la memoria, de modo que no queden huecos.</li>
+<li>No se permiten realizar ciertas conversiones (casting) entre distintos tipos de datos.</li>
+</ul>
+<h2 id="13-el-lenguaje-java">1.3. El lenguaje Java</h2>
+<p>Java es un lenguaje de propósito general, de alto nivel, y orientado a objetos.
+Java es un lenguaje de programación orientado a objetos puro, en el sentido de que no hay ninguna
+variable, función o constante que no esté dentro de una clase. Se accede a los miembros dato y las
+funciones miembro a través de los objetos y de las clases. Por razones de eficiencia, se han conservado
+los tipos básicos de datos, int, float, double, char, etc, similares a los del lenguaje C/C++.
+La API de Java es muy rica, está formada por un conjunto de paquetes de clases que le proporcionan
+una gran funcionalidad. El núcleo de la API viene con cada una de las implementaciones de la JVM:</p>
+<ul>
+<li>Lo esencial: tipos de datos, clases y objetos, arrays, cadenas de caracteres (strings),
+  subprocesos (threads), entrada/salida (I/O), propiedades del sistema, etc.</li>
+<li>Applets</li>
+<li>Manejo de la red (networking)</li>
+<li>Internacionalización</li>
+<li>Seguridad</li>
+<li>Componentes (JavaBeans)</li>
+<li>Persistencia (Object serialization)</li>
+<li>Conexión a bases de datos (JDBC)
+  Java proporciona también extensiones, por ejemplo, define un API para 3D, para los servidores, telefonía,
+  reconocimiento de voz, etc.</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href=".." class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Índice de contenido
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../entorno/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Entorno de desarrollo
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2820 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../img/favicon/favicon.ico">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-6.2.8">
+    
+    
+      
+        <title>Bloques básicos en Java - Curso Básico Java</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.cb6bc1d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.39b8e14a.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3-bloques-basicos-en-java" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Curso Básico Java" class="md-header-nav__button md-logo" aria-label="Curso Básico Java">
+      
+  <img src="../img/logo/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            Curso Básico Java
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              Bloques básicos en Java
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Curso Básico Java" class="md-nav__button md-logo" aria-label="Curso Básico Java">
+      
+  <img src="../img/logo/logo.png" alt="logo">
+
+    </a>
+    Curso Básico Java
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+      
+      <label class="md-nav__link" for="nav-1">
+        Bloque Java Básico
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Bloque Java Básico" data-md-level="1">
+        <label class="md-nav__title" for="nav-1">
+          <span class="md-nav__icon md-icon"></span>
+          Bloque Java Básico
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Índice de contenido
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java_intro/" class="md-nav__link">
+        Java
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entorno/" class="md-nav__link">
+        Entorno de desarrollo
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Bloques básicos en Java
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Bloques básicos en Java
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#3-bloques-basicos-en-java" class="md-nav__link">
+    3. Bloques básicos en Java
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31-comprender-la-estructura-de-clases-de-java" class="md-nav__link">
+    3.1. Comprender la estructura de clases de Java
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. Comprender la estructura de clases de Java">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311-propiedades-y-metodos" class="md-nav__link">
+    3.1.1. Propiedades y métodos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-comentarios" class="md-nav__link">
+    3.1.2. Comentarios
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-javadoc" class="md-nav__link">
+    3.1.3. Javadoc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-clases-vs-archivos" class="md-nav__link">
+    3.1.4. Clases vs. Archivos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-el-metodo-main" class="md-nav__link">
+    3.2. El método main()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-paquetes-e-importaciones" class="md-nav__link">
+    3.3. Paquetes e importaciones
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Paquetes e importaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-wildcards" class="md-nav__link">
+    3.3.1. Wildcards
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-imports-redundantes" class="md-nav__link">
+    3.3.2. Imports redundantes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333-conflictos-de-nombrado" class="md-nav__link">
+    3.3.3. Conflictos de nombrado
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#334-crear-un-nuevo-paquete" class="md-nav__link">
+    3.3.4. Crear un nuevo paquete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#335-compilar-codigo-con-packages" class="md-nav__link">
+    3.3.5. Compilar código con packages :
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3.5. Compilar código con packages :">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac-oslinux" class="md-nav__link">
+    Mac OS/Linux
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#336-ruta-de-las-clases-y-jars" class="md-nav__link">
+    3.3.6. Ruta de las clases y JARs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-crear-objetos" class="md-nav__link">
+    3.4. Crear objetos
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4. Crear objetos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#341-constructores" class="md-nav__link">
+    3.4.1. Constructores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#342-leer-y-modificar-las-propiedades-de-los-objetos" class="md-nav__link">
+    3.4.2. Leer y modificar las propiedades de los objetos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#343-bloques-inicializadores-de-instancias" class="md-nav__link">
+    3.4.3. Bloques inicializadores de instancias
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#344-orden-de-inicializacion" class="md-nav__link">
+    3.4.4. Orden de inicialización
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35-diferencia-entre-referencias-a-objetos-y-primitivas-de-datos" class="md-nav__link">
+    3.5. Diferencia entre referencias a objetos y primitivas de datos
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5. Diferencia entre referencias a objetos y primitivas de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#351-primitivas-de-datos" class="md-nav__link">
+    3.5.1. Primitivas de datos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#352-tipos-referencia" class="md-nav__link">
+    3.5.2. Tipos referencia
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#353-diferencias-clave" class="md-nav__link">
+    3.5.3. Diferencias clave
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36-declarando-e-inicializando-variables" class="md-nav__link">
+    3.6. Declarando e inicializando variables
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6. Declarando e inicializando variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#361-declarar-multiples-variables" class="md-nav__link">
+    3.6.1. Declarar múltiples variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#362-identificadores" class="md-nav__link">
+    3.6.2. Identificadores
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6.2. Identificadores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#identificadores-en-el-mundo-real" class="md-nav__link">
+    Identificadores en el mundo real
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#37-comprension-de-la-inicializacion-por-defecto-de-las-variables" class="md-nav__link">
+    3.7. Comprensión de la inicialización por defecto de las variables
+  </a>
+  
+    <nav class="md-nav" aria-label="3.7. Comprensión de la inicialización por defecto de las variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#371-variables-locales" class="md-nav__link">
+    3.7.1. Variables locales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#372-variables-de-clase-e-instancia" class="md-nav__link">
+    3.7.2. Variables de clase e instancia
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38-entendiendo-el-ambito-de-las-variables" class="md-nav__link">
+    3.8. Entendiendo el ámbito de las variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#39-ordenando-elementos-en-una-clase" class="md-nav__link">
+    3.9. Ordenando elementos en una clase
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#310-destruyendo-objetos" class="md-nav__link">
+    3.10. Destruyendo Objetos
+  </a>
+  
+    <nav class="md-nav" aria-label="3.10. Destruyendo Objetos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3101-garbage-collection" class="md-nav__link">
+    3.10.1. Garbage Collection
+  </a>
+  
+    <nav class="md-nav" aria-label="3.10.1. Garbage Collection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetos-vs-referencias" class="md-nav__link">
+    Objetos vs Referencias
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3102-finalize" class="md-nav__link">
+    3.10.2. finalize()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#311-beneficios-de-java" class="md-nav__link">
+    3.11. Beneficios de Java
+  </a>
+  
+    <nav class="md-nav" aria-label="3.11. Beneficios de Java">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#orientado-a-objetos" class="md-nav__link">
+    Orientado a Objetos:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encapsulamiento" class="md-nav__link">
+    Encapsulamiento :
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plataforma-independiente" class="md-nav__link">
+    Plataforma Independiente :
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robusto" class="md-nav__link">
+    Robusto:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple" class="md-nav__link">
+    Simple:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seguro" class="md-nav__link">
+    Seguro:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#312-resumen" class="md-nav__link">
+    3.12. Resumen
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operaciones_sentencias/" class="md-nav__link">
+        Operaciones y Sentencias
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        API de Java
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metodos_encapsulamiento/" class="md-nav__link">
+        Métodos y encapsulamiento
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dise%C3%B1o_clases/" class="md-nav__link">
+        Diseño de clases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../excepciones/" class="md-nav__link">
+        Excepciones
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#3-bloques-basicos-en-java" class="md-nav__link">
+    3. Bloques básicos en Java
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31-comprender-la-estructura-de-clases-de-java" class="md-nav__link">
+    3.1. Comprender la estructura de clases de Java
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1. Comprender la estructura de clases de Java">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311-propiedades-y-metodos" class="md-nav__link">
+    3.1.1. Propiedades y métodos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-comentarios" class="md-nav__link">
+    3.1.2. Comentarios
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-javadoc" class="md-nav__link">
+    3.1.3. Javadoc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-clases-vs-archivos" class="md-nav__link">
+    3.1.4. Clases vs. Archivos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-el-metodo-main" class="md-nav__link">
+    3.2. El método main()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-paquetes-e-importaciones" class="md-nav__link">
+    3.3. Paquetes e importaciones
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. Paquetes e importaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-wildcards" class="md-nav__link">
+    3.3.1. Wildcards
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-imports-redundantes" class="md-nav__link">
+    3.3.2. Imports redundantes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333-conflictos-de-nombrado" class="md-nav__link">
+    3.3.3. Conflictos de nombrado
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#334-crear-un-nuevo-paquete" class="md-nav__link">
+    3.3.4. Crear un nuevo paquete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#335-compilar-codigo-con-packages" class="md-nav__link">
+    3.3.5. Compilar código con packages :
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3.5. Compilar código con packages :">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac-oslinux" class="md-nav__link">
+    Mac OS/Linux
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#336-ruta-de-las-clases-y-jars" class="md-nav__link">
+    3.3.6. Ruta de las clases y JARs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-crear-objetos" class="md-nav__link">
+    3.4. Crear objetos
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4. Crear objetos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#341-constructores" class="md-nav__link">
+    3.4.1. Constructores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#342-leer-y-modificar-las-propiedades-de-los-objetos" class="md-nav__link">
+    3.4.2. Leer y modificar las propiedades de los objetos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#343-bloques-inicializadores-de-instancias" class="md-nav__link">
+    3.4.3. Bloques inicializadores de instancias
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#344-orden-de-inicializacion" class="md-nav__link">
+    3.4.4. Orden de inicialización
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35-diferencia-entre-referencias-a-objetos-y-primitivas-de-datos" class="md-nav__link">
+    3.5. Diferencia entre referencias a objetos y primitivas de datos
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5. Diferencia entre referencias a objetos y primitivas de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#351-primitivas-de-datos" class="md-nav__link">
+    3.5.1. Primitivas de datos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#352-tipos-referencia" class="md-nav__link">
+    3.5.2. Tipos referencia
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#353-diferencias-clave" class="md-nav__link">
+    3.5.3. Diferencias clave
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36-declarando-e-inicializando-variables" class="md-nav__link">
+    3.6. Declarando e inicializando variables
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6. Declarando e inicializando variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#361-declarar-multiples-variables" class="md-nav__link">
+    3.6.1. Declarar múltiples variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#362-identificadores" class="md-nav__link">
+    3.6.2. Identificadores
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6.2. Identificadores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#identificadores-en-el-mundo-real" class="md-nav__link">
+    Identificadores en el mundo real
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#37-comprension-de-la-inicializacion-por-defecto-de-las-variables" class="md-nav__link">
+    3.7. Comprensión de la inicialización por defecto de las variables
+  </a>
+  
+    <nav class="md-nav" aria-label="3.7. Comprensión de la inicialización por defecto de las variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#371-variables-locales" class="md-nav__link">
+    3.7.1. Variables locales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#372-variables-de-clase-e-instancia" class="md-nav__link">
+    3.7.2. Variables de clase e instancia
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38-entendiendo-el-ambito-de-las-variables" class="md-nav__link">
+    3.8. Entendiendo el ámbito de las variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#39-ordenando-elementos-en-una-clase" class="md-nav__link">
+    3.9. Ordenando elementos en una clase
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#310-destruyendo-objetos" class="md-nav__link">
+    3.10. Destruyendo Objetos
+  </a>
+  
+    <nav class="md-nav" aria-label="3.10. Destruyendo Objetos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3101-garbage-collection" class="md-nav__link">
+    3.10.1. Garbage Collection
+  </a>
+  
+    <nav class="md-nav" aria-label="3.10.1. Garbage Collection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetos-vs-referencias" class="md-nav__link">
+    Objetos vs Referencias
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3102-finalize" class="md-nav__link">
+    3.10.2. finalize()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#311-beneficios-de-java" class="md-nav__link">
+    3.11. Beneficios de Java
+  </a>
+  
+    <nav class="md-nav" aria-label="3.11. Beneficios de Java">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#orientado-a-objetos" class="md-nav__link">
+    Orientado a Objetos:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encapsulamiento" class="md-nav__link">
+    Encapsulamiento :
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plataforma-independiente" class="md-nav__link">
+    Plataforma Independiente :
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robusto" class="md-nav__link">
+    Robusto:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple" class="md-nav__link">
+    Simple:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seguro" class="md-nav__link">
+    Seguro:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#312-resumen" class="md-nav__link">
+    3.12. Resumen
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Bloques básicos en Java</h1>
+                
+                <h2 id="3-bloques-basicos-en-java">3. Bloques básicos en Java</h2>
+<h2 id="31-comprender-la-estructura-de-clases-de-java">3.1. Comprender la estructura de clases de Java</h2>
+<p>Las clases son los componentes básicos en un programa Java. Cuando se define una clase , se describen
+todas las partes y características que la componen. Para utilizar la mayoría de las clases, se tienen que
+crear objetos. Un objeto es una instancia de la clase en tiempo de ejecución. Los objetos de las distintas
+clases representan el estado del programa. En las siguientes secciones se verán los componentes de una
+clase Java, así como la relación entre clases y archivos.</p>
+<h3 id="311-propiedades-y-metodos">3.1.1. Propiedades y métodos</h3>
+<p>Las clases Java tienen dos elementos principales, métodos , a menudo llamados funciones o
+procedimientos, y propiedades , también conocidas como atributos. Las propiedades mantienen el
+estado del programa, y los métodos operan en ese estado. Si el cambio es relevante en el estado del
+programa, se almacenará en una propiedad. Es el programador quien crea y organiza estos elementos
+de tal manera que el código sea útil y fácil de entender para otros programadores.
+La clase Java más simple que puede escribirse es como la que sigue:
+(Los números de línea solo están ahí para hacer la lectura del código más fácil, no intervienen en el
+programa).
+<div class="highlight"><pre><span></span><code>1: public class Fruit {
+2: }
+</code></pre></div>
+En Java existen palabras reservadas, también llamadas palabras clave o keywords. Estas palabras
+poseen un significado especial para Java, como, por ejemplo, la palabra reservada public (línea 1), que</p>
+<p>permite a la clase Fruit ser utilizada por otras clases. La palabra reservada class indica que se está
+definiendo una clase. Fruit es el nombre de la clase. A continuación, se añadirá a la clase Fruit su primera
+propiedad:
+<div class="highlight"><pre><span></span><code>1: public class Fruit {
+2: String name;
+3: }
+</code></pre></div>
+En la línea 2, se define la propiedad llamada name. También se define el tipo de dato de la propiedad
+como una cadena de texto ( String ). Un String es un tipo de dato que contiene un texto, como por ejemplo
+“Esto es un String ”. String también es una clase Java, predefinida en el propio lenguaje. Como se
+mencionó anteriormente, una clase también puede contener métodos, los cuales se declaran como se ve
+en el siguiente código:
+<div class="highlight"><pre><span></span><code>1: public class Fruit {
+2: String name;
+3: public String getName() {
+4: return name;
+5: }
+6: public void setName(String newName) {
+7: name = newName;
+8: } 9: }
+</code></pre></div>
+En las líneas 3-5 se ha declarado el primer método. Un método es una operación que puede ser llamada.
+En la declaración del método se hace también uso de la palabra reservada public para indicar que el
+método puede ser llamado desde cualquier otra clase. La siguiente palabra, String en este caso, hace
+referencia al tipo de dato que devuelve el método. En este caso, el tipo de dato devuelto es un String.
+En las líneas 6-8 se ha introducido un segundo método, el cual no devuelve nada (palabra reservada
+void ). Este método requiere que se le proporcione información cada vez que se le llama; esta información
+se llama parámetro. El método setName tiene un parámetro llamado newName , y es de tipo String. La
+persona que llama al método le debe pasar, por lo tanto, un parámetro de tipo String , y, tras realizar la
+operación de asignar el valor del parámetro newName a la propiedad name , puesto que es void , el
+método setName no devolverá nada.</p>
+<h3 id="312-comentarios">3.1.2. Comentarios</h3>
+<p>Los comentarios son muy habituales en el código de un programa Java. Son líneas de texto que no son
+ejecutadas, y que pueden ser colocadas en cualquier lugar. Los comentarios tienen como finalidad hacer
+la lectura del código más sencilla. Hay tres tipos de comentarios en Java.</p>
+<p>1 - El comentario de una sola línea, comienza con dos barras diagonales.
+<div class="highlight"><pre><span></span><code>// comment until end of line
+</code></pre></div></p>
+<p>2 - El comentario de varias líneas o comentario de líneas múltiples, comienza con el símbolo <em>"/ *"</em> hasta el
+símbolo * /. Se suele escribir * al comienzo de cada línea de un comentario de líneas múltiples para
+que sea más fácil de leer.</p>
+<div class="highlight"><pre><span></span><code>/* Multiple
+(^) * line comment
+(^) */
+</code></pre></div>
+<p>3 - El comentario de Javadoc, muy similar a un comentario de líneas múltiples. Los comentarios de
+Javadoc tienen una estructura específica que la herramienta Javadoc sabe cómo interpretar para poder
+crear la documentación del código. La diferencia con los comentarios de líneas múltiples es que el
+comienzo debe ser "/**"
+<div class="highlight"><pre><span></span><code>/**
+Javadoc multiple-line comment
+  */
+</code></pre></div></p>
+<h3 id="313-javadoc">3.1.3. Javadoc</h3>
+<p>Javadoc es una utilidad de Oracle que sirve para generar documentación de APIs en formato HTML a
+partir del código. Al documentar una clase, se debe incluir lo siguiente:</p>
+<ul>
+<li>Descripción general de la clase, número de versión, nombre de autores.</li>
+<li>Documentación de métodos: incluye descripción general, nombre y tipos de parámetros, descripción
+  de parámetros, tipo de retorno, descripción del valor que devuelve.</li>
+</ul>
+<p>Para que javadoc pueda generar la documentación automáticamente, la información debe incluirse entre
+símbolos de comentario de forma que empiece con una barra simple y doble asterisco (/*<em>), y termine
+con un asterisco y barra simple (</em>/). Dependiendo de la ubicación, el comentario puede representar una
+cosa distinta, si está incluido delante de una clase, es un comentario de clase pero, si está incluido
+delante de un método, es un comentario de ese método.
+Para crear la documentación de javadoc, se hace uso de palabras reservadas o "tags" que van precedidas
+por el carácter "@". En la siguiente tabla se puede encontrar las palabras reservadas que suelen utilizarse
+más a menudo.</p>
+<table>
+<thead>
+<tr>
+<th>TAG</th>
+<th>DESCRIPCIÓN</th>
+<th>COMPRENDE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@author</td>
+<td>Nombre del desarrollador.</td>
+<td>Nombre autor o autores</td>
+</tr>
+<tr>
+<td>@deprecated</td>
+<td>Indica que el método o clase es obsoleto (propio de versiones anteriores) y que no se recomienda su uso.</td>
+<td>Descripción</td>
+</tr>
+<tr>
+<td>@param</td>
+<td>Definición de un parámetro de un método, es requerido para todos los parámetros del método.</td>
+<td>Nombre de parámetro y descripción</td>
+</tr>
+<tr>
+<td>@return</td>
+<td>Informa de lo que devuelve el método, no se aplica en constructores o métodos <em>"void"</em>.</td>
+<td>Descripción del valor de retorno</td>
+</tr>
+<tr>
+<td>@see</td>
+<td>Asocia con otro método o clase.</td>
+<td>Referencia cruzada referencia (#método(); clase#método(); paquete.clase; paquete.clase#método()).</td>
+</tr>
+<tr>
+<td>@version</td>
+<td>Versión del método o clase.</td>
+<td>Versión</td>
+</tr>
+</tbody>
+</table>
+<p>A continuación, se verá un ejemplo de documentación javadoc para una clase y un método.
+<div class="highlight"><pre><span></span><code>**/****
+
+*** Clase que implementa un ejemplo de una suma a partir de dos números dados * y**
+
+**devuelve el resultado por pantalla.**
+
+*****
+
+*** @author Sergio**
+
+*** @version 2.**
+
+*** @since 20 18**
+
+***/**
+
+class EjemploSuma {
+
+public static void main(String args[]){
+
+ int num1 = 10; 
+ int num2 = 5;
+
+int result = getSuma(num1,num2);
+
+System.out.println(&quot;La suma es igual a &quot;+result);
+
+}
+
+**/****
+
+*** Devuelve la suma de dos números enteros (int)**
+
+*****
+
+*** @param a primer sumando**
+
+*** @param b segundo sumando**
+
+*** @return resultado de la suma**
+
+***/**
+
+public static int getSuma(int a, int b) {
+
+return a+b;
+
+}
+
+}
+</code></pre></div></p>
+<h3 id="314-clases-vs-archivos">3.1.4. Clases vs. Archivos</h3>
+<p>Normalmente, cada clase de Java se define en su propio archivo * .java. Por lo general las clases son
+public , lo que significa que cualquier código puede utilizarlas. Las clases; no obstante, no tienen por qué
+ser públicas.
+Por ejemplo, definir una clase como sigue (sin la palabra reservada public ), también es posible.
+<div class="highlight"><pre><span></span><code>1: class Fruit {
+2: String name;
+3: }
+</code></pre></div></p>
+<p>También es posible que dos clases Java estén en el mismo archivo. En este caso, como mucho una de
+las clases del archivo puede ser pública.
+Por ejemplo:
+<div class="highlight"><pre><span></span><code>1: public class Fruit {
+2: private String name;
+3: }
+4: class FruitSqueezer {
+5: }
+</code></pre></div>
+En caso de tener una clase pública en el archivo, el nombre de la clase debe coincidir con el nombre del
+archivo; es decir, public class FruitSqueezer provocaría un error de compilación en un archivo llamado <strong>Fruit.java</strong>.</p>
+<h2 id="32-el-metodo-main">3.2. El método main()</h2>
+<p>Un programa Java comienza su ejecución en su método main(). El método main() es lo primero que se
+ejecuta cuando se inicia el programa, y es llamado automáticamente por la Máquina Virtual Java (JVM).
+La JVM es la encargada de comunicarse con el sistema subyacente para asignar recursos como la
+memoria, la CPU, el acceso a archivos, etc.</p>
+<p>El método main() nos sirve como enlace para conectar las distintas partes del código a partir del inicio
+de la ejecución del programa.
+Un ejemplo del tipo de clase más simple que puede contener el método main() sería como la siguiente:
+<div class="highlight"><pre><span></span><code>1: public class Fruit {
+2: public static void main(String[] args) { 3:
+4: }
+5:}
+</code></pre></div>
+Este código no hace nada útil. No tiene ninguna instrucción más allá que declarar el punto de inicio de la
+ejecución del programa. Lo que se pretende con este código de ejemplo es mostrar que el método main()
+se puede declarar en cualquier parte del código Java. De hecho, la única razón de que este método esté
+dentro de una clase se debe a que el lenguaje así lo requiere.
+Para compilar ( <strong>javac</strong> ) y ejecutar ( <strong>java</strong> ) el siguiente código, este debería escribirse dentro del archivo
+Fruit.java, y posteriormente se deberían escribir las siguientes instrucciones en la consola:
+<div class="highlight"><pre><span></span><code>$ javac Fruit.java
+$ java Fruit
+</code></pre></div></p>
+<p>En caso de no obtener ningún mensaje de error, el programa se ejecutó con éxito. En caso de obtener
+un mensaje de error, se debería verificar que el Java Development Kit (JDK) está correctamente instalado
+y que no existe ningún error sintáctico en la escritura del código.
+Para compilar código Java, el archivo debe tener la extensión .java. El nombre del archivo debe coincidir
+con el nombre de la clase definida en el archivo. El resultado es otro archivo de bytecode con el mismo
+nombre, pero con una extensión .class. El bytecode no es código legible por las personas, pero sí por la
+JVM.
+Las reglas sobre cómo debe ser el contenido de un archivo de código Java son más extensas de lo que
+se ha visto hasta ahora; no obstante, por el momento y con la finalidad de hacerlo más simple, solo se
+tendrán en cuenta las siguientes:</p>
+<p>1 - Cada archivo puede contener solo una clase (<em>ya se ha visto que no tiene por qué ser así, pero
+de esta forma el código será más sencillo</em>).  </p>
+<p>2 - El nombre del archivo debe coincidir con el nombre de la clase que contiene, y la extensión de
+este siempre será .java.</p>
+<p>Se supone que se reemplaza la línea 3 en Fruit.java con <strong>System.out.println ("Hola")</strong>. Cuando se compila
+y se ejecuta nuevamente el código, el programa imprimirá en la consola la palabra <strong>“Hola”</strong>.
+A continuación se va a revisar en profundidad el método main() , ya que aparecen en él una serie de
+palabras clave del lenguaje Java, algunas ya vistas anteriormente.  </p>
+<p>La palabra reservada public es lo que se llama un modificador de acceso. Declara el nivel de exposición
+de este método a la hora de ser llamado en otras partes del programa. En este caso, public hace
+referencia a que el método puede ser llamado en cualquier parte del programa.  </p>
+<p>La palabra reservada static enlaza un método a su clase para que pueda ser llamado solo por el nombre
+de la clase, como, por ejemplo, Fruit.main(). No es necesario crear un objeto para llamar al método
+main(). Si el método main() no está presente en la clase .java que se ejecuta en la consola, el proceso
+generará un error y terminará. Incluso si el método main() está presente y no es estático (palabra
+reservada static ), Java lanzará una excepción.  </p>
+<p>La palabra reservada void representa el tipo de dato que devuelve el método. Un método que no devuelve
+datos (es decir, que es void ) devuelve el control de la ejecución del programa al punto donde quedó
+antes de ser ejecutado de manera “silenciosa”. En general, es una buena práctica usar void para métodos
+que cambian el estado de un objeto. En ese caso, el método main() cambia el estado del programa de
+iniciado a finalizado.  </p>
+<p>Finalmente se llega a la lista de parámetros del método main() , representada como un array de objetos
+de tipo java.lang.String. El compilador acepta cualquiera de las siguientes formas a la hora de declarar
+lo parámetros: String[] args , String args[] o String...args. La variable args contiene los argumentos que
+se leyeron de la consola cuando se inició la JVM. Los caracteres [] son corchetes, utilizados para
+representar que args es un array. Un array es una lista de tamaño fijo que contiene elementos de un
+mismo tipo de dato. Los caracteres ... se denominan varargs (lista de argumentos variable).
+En el siguiente ejemplo se ve cómo usar el parámetro args. Primero se modifica el programa anterior
+para imprimir los primeros dos argumentos que sean pasados al programa:
+<div class="highlight"><pre><span></span><code>public class Fruit {
+public static void main(String[] args) {
+
+
+System.out.println(args[0]);
+System.out.println(args[1]);
+ } 
+}
+</code></pre></div>
+ <strong>args[0]</strong> accede al primer elemento del array. Los índices de los array en Java siempre comienzan por 0.
+Para ejecutar el código anterior, se podría escribir en la consola:
+<div class="highlight"><pre><span></span><code>$ javac Fruit.java
+$ java Fruit Banana Apple
+</code></pre></div>
+Y la consola imprimiría:
+<div class="highlight"><pre><span></span><code>Banana
+Apple
+</code></pre></div>
+El programa identifica correctamente las dos primeras palabras como argumentos separados por
+espacios. En caso de querer espacios dentro de un argumento, se usan comillas tal que así:
+<div class="highlight"><pre><span></span><code>$ javac Fruit.java
+$ java Fruit &quot;Big Banana&quot; Apple
+</code></pre></div>
+Y la consola imprimiría:
+<div class="highlight"><pre><span></span><code>Big Banana
+Apple
+</code></pre></div>
+Todos los argumentos de la línea de comandos se tratan como objetos de tipo String , incluso si
+representan otro tipo de datos:
+<div class="highlight"><pre><span></span><code>$ javac Fruit.java
+$ java Fruit Fruit 1
+</code></pre></div>
+A pesar de que Fruit es una clase y 1 es un número, el programa los interpretará a ambos como la cadena
+de texto “Fruit” y la cadena de texto “1”, y por lo tanto, la consola imprimirá lo siguiente:
+<div class="highlight"><pre><span></span><code>Fruit
+1
+</code></pre></div>
+Finalmente, ¿Qué sucede si no se escriben suficientes argumentos?
+<div class="highlight"><pre><span></span><code>$ javac Fruit.java
+$ java Fruit Fruit
+</code></pre></div>
+La lectura de args[0] es correcta y “Fruit” se imprime por pantalla, pero al no tener otro argumento, Java
+imprime una excepción mostrando que no existe ningún argumento en args[1].
+La consola imprimirá por lo tanto:
+<div class="highlight"><pre><span></span><code>FruitException in thread &quot;main&quot;
+java.lang.ArrayIndexOutOfBoundsException: 1
+at mainmethod. **Fruit** .main (Fruit.java:7)
+</code></pre></div>
+Es necesario tener un JDK (Java Development Kit) para compilar código Java; no obstante, el JDK no es
+necesario para ejecutar el código, basta con un JRE (Java Runtime Environment). Los archivos de clase</p>
+<p>Java que se ejecutan en la JVM (Java Virtual Machine) se ejecutan en cualquier máquina con Java
+independientemente de la máquina original donde fueron compilados o el sistema operativo de esta.</p>
+<h2 id="33-paquetes-e-importaciones">3.3. Paquetes e importaciones</h2>
+<p>Java tiene miles de clases por defecto y muchas otras creadas por otros desarrolladores, por lo que es
+necesario una forma de organizarlas.
+En Java existen paquetes ( packages ), los cuales sirven para organizar las clases de manera lógica. Es
+necesario especificar en qué paquete se encuentra cada clase para que Java pueda utilizar la clase
+correcta.
+Se supone que el siguiente código está por compilar:
+<div class="highlight"><pre><span></span><code>public class ImportExample {
+
+ public static void main(String[] args) { 
+
+  Random r = new Random(); // ¡No compila!
+
+ System.out.println(r.nextInt(10));
+
+ }
+
+}
+</code></pre></div>
+El compilador de Java mostrará un error como el siguiente:
+<div class="highlight"><pre><span></span><code>Random cannot be resolved to a type
+</code></pre></div>
+Este error podría significar un error tipográfico en el nombre de la clase, o puede que se haya omitido
+un <em>import</em> necesario (la importación de la clase Random). Las sentencias de importación ( <em>import</em> ) indican
+a Java en qué paquetes buscar las clases.
+Intentarlo de nuevo con la importación de la clase Random hace que el programa compile:
+<div class="highlight"><pre><span></span><code>import java.util.Random; // Indica a la clase dónde encontrar la clase Random  
+                         //(Paquete java.util) public
+class ImportExample {
+public static void main(String[] args) {
+Random r = new Random();
+System.out.println(r.nextInt(10)); //Imprime por pantalla un número
+                                   // del 0 al 9
+  }
+}
+</code></pre></div>
+Ahora el código se ejecuta e imprime un número aleatorio entre 0 y 9. Al igual que ocurre con los arrays ,
+la cuenta empieza en 0. Las clases de Java se agrupan en paquetes ( packages ). La sentencia import le
+indica al compilador en qué paquete buscar para encontrar una clase.</p>
+<p>A modo de analogía, si se imagina una carta cuyo destinatario es la dirección C/San Andrés nº20 1ºC. El
+cartero irá en primer lugar al edificio número 20 de la calle San Andrés, y luego buscará el piso 1ºC. La
+dirección (calle y número de edificio) serían los paquetes Java, y 1ºC sería el nombre de la clase Java,
+la cual se ha podido encontrar porque se sabía dentro de qué paquetes estaba. Hay muchos pisos 1ºC,
+pero solo hay un 1ºC en el edificio nº20 de la calle San Andrés.</p>
+<p>Los nombres de los paquetes son jerárquicos, al igual que ocurre con el correo. El servicio de correo
+mirará en primer lugar el país, luego la región, la ciudad, la calle, el edificio y por último el piso para
+poder entregar una carta. Con los paquetes Java ocurre algo muy similar. Si el paquete comienza por
+java o javax significa que es un paquete por defecto del JDK; si empieza por cualquier otra cosa, hará
+referencia al dominio del propietario del paquete. Por ejemplo, el paquete com.amazon.laClaseQueSea
+indica que el código viene de amazon.com. Tras el nombre del dominio los nombres del resto de la
+jerarquía de paquetes y clases pueden ser los que el programador guste, aunque es una buena práctica
+que estos sean lo más descriptivos posible.
+En los ejemplos que se muestran a continuación es posible encontrar paquetes que no provengan de
+ningún dominio concreto, como, por ejemplo a.b.c (la clase c está dentro del paquete a.b), esto no es
+un problema, ya que se trata únicamente de ejemplos.</p>
+<h3 id="331-wildcards">3.3.1. Wildcards</h3>
+<p>Las clases que se encuentran en el mismo paquete se pueden importar todas juntas, y para ello, se
+utiliza el siguiente carácter comodín o wildcard. Actualmente se considera una mala práctica, ya que se
+importan clases innecesarias que pueden no necesitarse.
+<div class="highlight"><pre><span></span><code>import java.util.*; //El asterisco indica que se importarán todas las clases dentro
+                    //del paquete java.util
+</code></pre></div>
+Ejemplo:
+<div class="highlight"><pre><span></span><code>import java.util.*; 
+
+public class ImportExample {
+
+    public static void main(String[] args) {
+
+    Random r = new Random();
+
+System.out.println(r.nextInt(10));
+
+    }
+
+}
+</code></pre></div>
+En este caso, únicamente se utiliza la clase java.util.Random en el programa; no obstante, se han
+importado todas las clases del paquete java.util (* es una wildcard que indica todas las clases).
+Únicamente se importarán las clases, no los paquetes hijos que contenga.
+El número de import que tenga un programa no ralentiza el programa. El compilador lee cada clase en
+el momento en que la necesita.</p>
+<h3 id="332-imports-redundantes">3.3.2. Imports redundantes</h3>
+<p>Como se ha podido ver en el código de ejemplos anteriores, se han utilizado clases, como la clase System
+o la clase String en los programas sin importar nada, ¿Cómo es que el código funcionaba si no se han
+importado estas clases? Esto se debe a que existe un paquete en Java llamado java.lang que siempre se
+importa de manera automática. Aun así, Java permite también importarlo manualmente. Esto, no
+obstante, no se debe hacer, ya que importar algo que se importa por defecto o que ya está importado
+crea código redundante.
+Ejemplo:
+<div class="highlight"><pre><span></span><code>1: import java.lang.System;
+2: import java.lang.*;
+3: import java.util.Random;
+4: import java.util.*;
+5: public class ImportExample {
+6: public static void main(String[] args) {
+7: Random r = new Random();
+8: System.out.println(r.nextInt(10));
+9:  }
+10:}
+</code></pre></div>
+¿Cuántos de los import son redundantes?
+La respuesta es tres. Las líneas 1 y 2 son redundantes porque, como se ha comentado anteriormente, el
+paquete java.lang es importado de forma automática y por lo tanto no necesita de un import. La línea 4
+es también redundante. La clase Random es importada al código mediante la sentencia de la línea 3
+( import java.util.Random; ), por lo que no es necesario importar, además, el resto del paquete java.util
+de la línea 4.
+Otro caso de redundancia sería importar una clase que se encuentra en el mismo paquete que la clase
+que se está ejecutando, ya que, de forma automática, Java tiene en cuenta a todas las clases del mismo
+paquete sin necesidad de importarlas unas en otras.<br />
+Otro ejemplo:
+<div class="highlight"><pre><span></span><code>public class InputImports { 
+
+    public void read(Files files) {
+    Paths.get(&quot;name&quot;);
+    }
+}
+</code></pre></div>
+Se supone que las clases <em>Files</em> y <em>Paths</em> están en el mismo paquete java.nio.file, y que la clase del ejemplo,
+InputInmports, está en un paquete diferente. ¿Qué se debería importar para que el programa compile?<br />
+Hay dos posibles formas de hacerlo:
+<div class="highlight"><pre><span></span><code>import java.nio.file.*; //Importa ambos paquetes debido al uso de la _wildcard_ *
+</code></pre></div>
+o
+<div class="highlight"><pre><span></span><code>import.jav a.nio.file.Files; //Importa la clase File
+import.java.nio.file.Paths; //Importa la clase Paths
+</code></pre></div></p>
+<p>A continuación, se muestran unos ejemplos que NO funcionarían:</p>
+<div class="highlight"><pre><span></span><code>import java.nio.*; // NO FUNCIONA. Recordar que la wildcard *
+                   //solo importa clases, no otros paquetes import
+
+java.nio.*.*; // NO FUNCIONA. Solo puede haber una wildcard
+              //por import y esta debe estar al final import
+
+java.nio.file.Paths.*; // NO FUNCIONA. No se pueden importar
+                       //métodos sin la palabra clave static
+</code></pre></div>
+<h3 id="333-conflictos-de-nombrado">3.3.3. Conflictos de nombrado</h3>
+<p>Una de las razones para utilizar paquetes en Java es que el nombre de las clases no tiene por qué ser
+único. Esto quiere decir que algunas veces se querrá importar una clase que tenga el mismo nombre que
+otras que se encuentran en otras partes del programa. Un ejemplo de esto es la clase Date. Java posee
+implementadas las clases java.util.Date y java.sql.Date. Son dos clases diferentes con el mismo nombre;
+no obstante, cada una se encuentra en un paquete diferente.<br />
+Ejemplo:
+<div class="highlight"><pre><span></span><code>import java.util.*; 
+
+import java.sql.*; // No compila 
+
+public class Conflicts {
+
+    Date date;
+
+//Más código
+}
+</code></pre></div></p>
+<p>El código no compila ya que la clase Date existe en ambos paquetes, por lo que Java dará el siguiente
+error de compilación: “<em>The type Date is ambiguous</em>”.
+Tampoco compilará esto:
+<div class="highlight"><pre><span></span><code>import java.util.Date; import
+java.sql.Date;
+</code></pre></div>
+Java lanzará el error de compilación "The import java.sql.Date collides with another import statement“.
+En caso de que se quiera usar las clases de ambos paquetes: clases de java.util.<em> y clases de java.sql.</em>,
+y la clase Date que será la que está en java.util.<em>, se deberá importar lo siguiente:
+<div class="highlight"><pre><span></span><code>import java.util.Date; import
+java.sql.*;
+</code></pre></div>
+Ahora, al importar de manera explícita la clase Date de java.util.</em>, esta tiene precedencia por encima de
+todas las clases importadas con la wildcard *.
+¿Qué ocurre si realmente se quiere utilizar en el código dos clases con el mismo nombre?
+En ocasiones podría ocurrir que se quisiera utilizar la clase Date de ambos paquetes. Cuando esto pasa,
+una opción sería importar únicamente una de las clases y, cuando se quiera utilizar la otra, llamarla
+haciendo uso de su nombre plenamente cualificado (es decir, nombre de paquete, punto, nombre de la
+clase). Por ejemplo:
+<div class="highlight"><pre><span></span><code>import java.util.Date;
+
+public class Conflicts {
+Date date; //Usa la clase java.util.Date java.sql.Date sqlDate; 
+           //Usa la clase java.sql.Date }
+</code></pre></div></p>
+<h3 id="334-crear-un-nuevo-paquete">3.3.4. Crear un nuevo paquete</h3>
+<p>Hasta ahora, parte del código que se ha escrito en el capítulo se ha encontrado en el paquete por defecto
+default package. Este es un paquete especial que carece de nombre y que es mejor no utilizar.
+En la vida real, será necesario nombrar los paquetes donde se encuentran las clases para evitar conflictos
+de nombrado y para permitir la reutilización de código.
+Ahora, se quiere crear un nuevo paquete. La estructura de directorios en un ordenador normal está
+relacionado con la estructura de paquetes en Java. Se debe tener en cuenta, por ejemplo, la existencia
+de las siguientes clases:
+<div class="highlight"><pre><span></span><code>C:\temp\packagea\ClassA.java package
+packagea;
+public class ClassA
+  {
+}
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>C: \ temp \ packageb \ ClassB.java
+package packageb;
+import packagea.ClassA;
+
+public class ClassB {
+public static void main(String[] args) {
+ClassA a;
+System.out.println(&quot;Got it&quot;);
+  }
+}
+</code></pre></div>
+Cuando se ejecuta un programa Java, Java sabe “dónde buscar” los paquetes necesarios. En este caso,
+ejecutando el programa en el directorio C:\temp todo funcionaría correctamente ya que ambos paquetes:
+packagea y packageb están en en C:\temp.</p>
+<h3 id="335-compilar-codigo-con-packages">3.3.5. Compilar código con packages :</h3>
+<p>Es posible, y de hecho mucho más cómodo, utilizar un IDE ( Integrated Development Environment ) para
+programar código Java, como Eclipse o Netbeans; no obstante, es posible ejecutar un programa Java
+desde la línea de comandos y es importante saber cómo hacerlo.
+Se comienza por crear ambas clases y situarse en el directorio C:\temp:  </p>
+<h4 id="windows">Windows</h4>
+<ul>
+<li>Crear los archivos:
+   <div class="highlight"><pre><span></span><code>C: \ temp \ packagea \ ClassA.java
+C: \ temp \ packageb \ ClassB.java
+</code></pre></div></li>
+<li>Ir a C: \ temp
+<div class="highlight"><pre><span></span><code>cd C: \ temp
+</code></pre></div></li>
+</ul>
+<h4 id="mac-oslinux">Mac OS/Linux</h4>
+<ul>
+<li>Crear los archivos:
+<div class="highlight"><pre><span></span><code>  /tmp/packagea/ClassA.java
+  /tmp/packageb/ClassB.java
+</code></pre></div></li>
+<li>Escribir el comando
+<div class="highlight"><pre><span></span><code>  cd /tmp
+</code></pre></div>
+A continuación es necesario <strong>compilar</strong> ambos archivos, por lo que hay que escribir lo siguiente en la línea
+de comandos:
+<div class="highlight"><pre><span></span><code>javac packagea/ClassA.java packageb/ClassB.java
+</code></pre></div>
+En caso de que el comando no funcione, se mostrará por pantalla un mensaje de error. En estos casos
+es recomendable revisar los archivos con cuidado para detectar algún posible error de sintaxis. En caso
+de que el comando funcione correctamente, se crearán
+dos nuevos archivos: <strong> packagea/ClassA.class y packageb/ClassB.class</strong>.
+Por último, quedaría ejecutar el programa. Para ello habría que poner lo siguiente en la línea de
+comandos:
+<div class="highlight"><pre><span></span><code>java packageb.ClassB
+</code></pre></div>
+Si todo funciona correctamente, la frase “ Got it ” se mostrará en la consola. Es importante percatarse de
+que a la hora de ejecutar un programa se escribe únicamente ClassB , no ClassB.class. En Java no se
+escribe la extensión cuando se ejecuta un programa.</li>
+</ul>
+<h3 id="336-ruta-de-las-clases-y-jars">3.3.6. Ruta de las clases y JARs</h3>
+<p>También es posible especificar la ubicación de otros archivos, explícitamente, utilizando rutas. Esta
+técnica es muy útil cuando los archivos de las clases están situados en otra parte que no sea el directorio
+actual o en archivos JAR. Un archivo JAR es como un archivo ZIP que únicamente contiene clases Java.
+A continuación se verán unos ejemplos:   </p>
+<p><strong>En Windows</strong>
+<div class="highlight"><pre><span></span><code>java - cp &quot;.;C: \ temp \ someOtherLocation;c: \ temp \ myJar.jar&quot; myPackage.MyClass
+</code></pre></div>
+<strong>En MAC OS/Linux</strong>
+<div class="highlight"><pre><span></span><code>java - cp &quot;.:/tmp/someOtherLocation:/tmp/myJar.jar&quot; myPackage.MyClass
+</code></pre></div>
+El punto inicial indica que se quiere incluir el directorio actual en la ruta de la clase. El resto del comando
+incluirá también las clases (o paquetes) en <em>someOtherLocation</em> y en <em>myJar.jar</em>. Windows utiliza el
+carácter punto y coma para separar las partes de la ruta, y MAC OS y Linux utiliza el carácter dos puntos.
+También es posible utilizar la <em>wildcard</em> (*) para hacer referencia a todos los JARs de un directorio. Como
+por ejemplo:
+<div class="highlight"><pre><span></span><code>java -cp &quot;C:\temp\directoryWithJars\*&quot; myPackage.MyClass
+</code></pre></div>
+Este comando añadirá todos los JARs que se encuentren en el directorio directoryWithJars a la ruta de la
+clase. No obstante, no incluirá los JARs que se encuentren en los subdirectorios de directoryWithJars.</p>
+<h2 id="34-crear-objetos">3.4. Crear objetos</h2>
+<p>Los objetos son una parte fundamental de un programa Java. Un objeto es una instancia de una clase.
+En las siguientes secciones, se profundizará acerca de los constructores, las propiedades y cómo éstas
+han de ser inicializadas correctamente.</p>
+<h3 id="341-constructores">3.4.1. Constructores</h3>
+<p>Para crear una instancia de una clase, siempre se utilizará la palabra reservada new. Por ejemplo:
+<div class="highlight"><pre><span></span><code>Random r = new Random();
+</code></pre></div>
+En primer lugar se declara la variable declarando el tipo de dato que tendrá (en este caso Random ) y
+su nombre (r). Esto permitirá a Java reservar en memoria una referencia al objeto. Es al escribir new
+Random() cuando realmente el objeto es creado.
+Random() parece un método, ya que está seguido de paréntesis. Este tipo de métodos son llamados
+constructores, y son los encargados de crear nuevos objetos. A continuación, se verá un ejemplo de
+cómo se define un método constructor:
+<div class="highlight"><pre><span></span><code>public class Chick {
+public Chick() {
+System.out.println(&quot;in constructor&quot;);
+ }
+}
+</code></pre></div>
+Cabe destacar un par de detalles del siguiente código: en primer lugar, el nombre del constructor es el
+mismo que el nombre de la clase, y en segundo lugar, no hay <strong>return</strong>.
+El método public void Chick() { } NO sería un constructor.
+Es necesario prestar especial atención a estos detalles. En caso de ver un método que comience por
+mayúscula pero tenga tipo de <strong>return</strong> (aunque este sea <strong>void</strong> ), nunca será un constructor. Se tratará de
+un método normal que no será ejecutado cuando se escriba <em>new Chick()</em>.
+El propósito de un constructor es inicializar las propiedades del objeto (aunque se pueda escribir dentro
+de él lo que se desee). Otra forma de inicializar propiedades es hacerlo directamente en la línea de código
+donde estas son declaradas. En el siguiente ejemplo se pueden observar ambos casos:
+<div class="highlight"><pre><span></span><code>public class Chicken {
+    int numEggs = 0;// Inicializada directamente
+    String name;
+    public Chicken() { 
+        name = &quot;Duke&quot;;// Inicializada en elconstructor 
+ }
+
+}
+</code></pre></div>
+Muchas clases no precisan de un constructor explícito, por lo que el compilador las provee de un
+constructor por defecto que no hace nada (es decir, su única finalidad es permitir crear objetos, pero no
+tiene código alguno en su interior).</p>
+<h3 id="342-leer-y-modificar-las-propiedades-de-los-objetos">3.4.2. Leer y modificar las propiedades de los objetos</h3>
+<p>Es posible leer y modificar las propiedades de un objeto a partir de sí mismo, por ejemplo:
+<div class="highlight"><pre><span></span><code>public class Swan { 
+
+int numberEggs;// variable de instancia o propiedad de la clase Swan
+
+public static void main(String[] args) { 
+
+    Swan mother = new Swan();
+    mother.numberEggs = 1; // modifica la propiedad
+    System.out.println(mother.numberEggs); // lee la propiedad
+
+  }
+}
+</code></pre></div>
+En este caso, la propiedad numberEggs es obtenida directamente cuando es imprimida por consola. En
+el método main , la variable numberEggs es modificada escribiendo en ella el valor 1.
+Más adelante se verá la forma de prevenir que cualquiera pueda modificar las propiedades de un objeto
+directamente, para que, por ejemplo, no se pueda poner un número de huevos negativo.
+También es posible leer y escribir propiedades directamente al declararlas:
+<div class="highlight"><pre><span></span><code>1: public class Name {
+2:      String first = &quot;Theodore&quot;;
+3:      String last = &quot;Moose&quot;;
+4:      String full = first + last;
+5: }
+</code></pre></div>
+Las líneas 2 y 3 modifican las propiedades first y last , respectivamente, mientras que en la línea 4 las
+propiedades first y last son leídas y, después, se modifica la propiedad full con el valor de la
+concatenación de ambas.</p>
+<h3 id="343-bloques-inicializadores-de-instancias">3.4.3. Bloques inicializadores de instancias</h3>
+<p>A lo largo de los capítulos anteriores se han visto diferentes métodos, todos ellos conteniendo los
+caracteres {}. El código entre llaves “{}” es llamado bloque de código.
+La mayoría de las veces hay bloques de código dentro de métodos, que se ejecutan cuando el método
+es llamado. Otras veces, los bloques de código pueden aparecer fuera de un método. Estos bloques son
+llamados inicializadores de instancia.
+¿Cuántos bloques hay en el siguiente código? ¿Cuántos de estos bloques son bloques inicializadores de
+instancias?
+<div class="highlight"><pre><span></span><code>3: public static void main(String[] args) {
+4: { System.out.println(&quot;Feathers&quot;); }
+5: }
+6: { System.out.println(&quot;Snowy&quot;); }
+</code></pre></div>
+Hay tres bloques y un inicializador de instancia. Contar el número de bloques es sencillo: únicamente
+hay que contar los pares de llaves que hay en el código. Si no hay el mismo número de “{“ que de “}”
+el código no compilará.
+Para poder identificar un bloque inicializador de instancia es necesario tener en cuenta que estos nunca
+podrán aparecer dentro de un método, por lo que el inicializador de instancia del código anterior es el
+bloque que aparece en la línea 6.</p>
+<h3 id="344-orden-de-inicializacion">3.4.4. Orden de inicialización</h3>
+<p>Cuando se escribe código que inicializa propiedades en diferentes partes del programa, es necesario
+tener en cuenta el orden de inicialización de las mismas. Por el momento, se tendrá en cuenta las
+siguientes reglas a la hora de inicializar propiedades:</p>
+<ul>
+<li>Tanto las propiedades como los bloques de iniciación de instancias son ejecutados en el orden en el
+  que aparezcan en el código.</li>
+<li>El constructor se ejecuta después de que las propiedades y los bloques de inicialización de instancias
+  se hayan ejecutado.
+  A continuación, se verá el siguiente ejemplo:
+<div class="highlight"><pre><span></span><code>1: public class Chick {
+2:      private String name = &quot;Fluffy&quot;;
+3: { System.out.println(&quot;setting field&quot;); }
+
+4: public Chick() {
+5:      name = &quot;Tiny&quot;;
+6:      System.out.println(&quot;setting constructor&quot;);
+7: }
+8: public static void main(String[] args) {
+9:      Chick chick = new Chick();
+10: S       ystem.out.println(chick.name); } }
+</code></pre></div>
+Que imprimirá por pantalla lo siguiente:
+<div class="highlight"><pre><span></span><code>setting field setting constructor
+Tiny
+</code></pre></div>
+En primer lugar, el programa comienza su ejecución en el método <em>main()</em> (como ocurre en cualquier
+programa Java). En la línea 9, se llama al constructor de la clase Chick, y Java crea un nuevo objeto de
+la misma. Primero la propiedad <em>name</em> es inicializada con el valor “Fluffy” en la línea 2. Después se ejecuta
+<em>System.out.println("setting field");</em> en la línea 3. Una vez las propiedades y los bloques inicializadores de
+instancias se han ejecutado, Java vuelve al constructor. La línea 5 cambia el valor de <em>name</em> a “Tiny” y la
+línea 6 vuelve a imprimir por pantalla mediante la sentencia <em>System.out.println("setting constructor");</em>
+En este punto, el constructor ha terminado de ejecutarse, y se retorna al método <em>main</em> , concretamente,
+a la línea 10.
+El orden del código es importante. No se puede hacer referencia a una variable antes de que esta haya
+sido declarada.
+<div class="highlight"><pre><span></span><code>{ System.out.println(name); } // NO COMPILA 
+private String name = &quot;Fluffy&quot;;
+</code></pre></div>
+Otro ejemplo, ¿qué imprimirá por pantalla el siguiente código?
+<div class="highlight"><pre><span></span><code>public class Egg {
+public Egg() {
+number = 5;
+}
+public static void main(String[] args) {
+Egg egg = new Egg();
+System.out.println(egg.number);
+} 
+private int number = 3; { number = 4;}
+
+}
+</code></pre></div>
+La respuesta correcta será “5”. Las propiedades y los bloques de código inicializadores de instancia se
+ejecutarán en primer lugar, cambiando number a 3 y luego a 4. Posteriormente, el constructor modifica
+number a 5, y esto es lo que se imprime por pantalla.</li>
+</ul>
+<h2 id="35-diferencia-entre-referencias-a-objetos-y-primitivas-de-datos">3.5. Diferencia entre referencias a objetos y primitivas de datos</h2>
+<p>Las aplicaciones Java contienen dos grupos de tipos de dato: variables de referencia y primitivas de
+datos. En este apartado se expondrán las diferencias entre ambos grupos.</p>
+<h3 id="351-primitivas-de-datos">3.5.1. Primitivas de datos</h3>
+<p>Java posee ocho tipos de dato incorporados en el propio lenguaje por defecto que se conocen como
+primitivas de datos. Estos ocho tipos de dato representan los cimientos de cualquier objeto Java, ya que
+todos los objetos son composiciones más o menos complejas de las primitivas de datos.
+La siguiente tabla muestra todas las primitivas de datos junto con su tamaño en bytes y el rango de
+valores que pueden adoptar.</p>
+<table>
+<thead>
+<tr>
+<th>Palabra reservada(keyword)</th>
+<th>Tipo</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean</td>
+<td>true o false</td>
+<td>True</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>Valor entero de 8 bits</td>
+<td>123</td>
+</tr>
+<tr>
+<td>short</td>
+<td>Valor entero de 16 bits</td>
+<td>123</td>
+</tr>
+<tr>
+<td>int</td>
+<td>Valor entero de 32 bits</td>
+<td>123</td>
+</tr>
+<tr>
+<td>long</td>
+<td>Valor entero de 64 bits</td>
+<td>123</td>
+</tr>
+<tr>
+<td>float</td>
+<td>Valor en coma flotante de 32 bits</td>
+<td>123.45f</td>
+</tr>
+<tr>
+<td>double</td>
+<td>Valor en coma flotante de 64 bits</td>
+<td>123.456</td>
+</tr>
+<tr>
+<td>char</td>
+<td>Valor Unicode de 16 bits</td>
+<td>‘a’</td>
+</tr>
+</tbody>
+</table>
+<p>A continuación se verá, detalladamente, la información de la tabla anterior:</p>
+<ul>
+<li>float y double son utilizados para representar valores decimales.</li>
+<li>Los datos float necesitan poner la letra f seguido del número para que Java los identifique como float.<ul>
+<li>byte, short, int y long se utilizan para representar números enteros.</li>
+</ul>
+</li>
+<li>Cada tipo numérico utiliza dos veces más bits que el tipo numérico más pequeño anterior a él; por
+  ejemplo, short utiliza el doble de bits que byte.
+  Es necesario tener presente que un byte puede contener valores de -128 a 127, ¿Por qué?</li>
+</ul>
+<p>Un byte son 8 bits. Un bit puede tener dos posibles valores. 2^8 es 256. Ya que el 0 también ha de ser
+incluido en el rango de números a abarcar, Java lo considera en la parte positiva, por lo que 256/2=128
+(de -128 a 127).
+El número de bits utilizado por Java cuando necesita reservar memoria para una primitiva de datos será
+el número de bits que ocupe cada tipo de dato. Por ejemplo, Java reservará 32 bits de memoria cuando
+se escriba lo siguiente:
+<div class="highlight"><pre><span></span><code>int num;
+</code></pre></div>
+Continuando con las primitivas de datos numéricas, cabe destacar que cuando un número está presente
+en el código, es llamado “literal”. Por defecto, Java asume que el valor definido es del tipo int. En el
+ejemplo siguiente, el valor que se muestra es demasiado grande para ser de tipo int.
+<div class="highlight"><pre><span></span><code>int max = 3123456789; //NO COMPILA
+</code></pre></div>
+Java mostrará que ese número está fuera de rango, lo cual es cierto teniendo en cuenta que pretende
+interpretarlo como un número de tipo int. No obstante, no se pretende que sea el número de tipo int. La
+solución es añadir la letra L al número.
+<div class="highlight"><pre><span></span><code>long max = 3123456789L; //Ahora es cuando Java comprende que el número es un long
+</code></pre></div>
+Otra manera de escribir números es cambar la base. Cuando se aprende a contar, se estudian los dígitos
+del 0 al 9 (números en base 10 o sistema decimal, ya que hay 10 números). Java permite escribir
+números de otras maneras:</p>
+<ul>
+<li>Octal (dígitos del 0-7). Para expresar un número en octal, este ha de ir precedido por un 0. Por
+  ejemplo: 017</li>
+<li>Hexadecimal (dígitos del 0-9, letras de la A-F). Para expresar un número en hexadecimal, este ha de
+  ir precedido por el prefijo 0x o 0X. Por ejemplo: 0xFF.</li>
+<li>Binario (dígitos 0-1). Para expresar un número en binario, este ha de ir precedido por el prefijo 0b o
+  0B. Por ejemplo: 0b10.
+  Lo último a tener en cuenta sobre literales numéricos es una característica añadida en Java 7, y es que
+  es posible añadir barras bajas a los números para facilitar su lectura:
+<div class="highlight"><pre><span></span><code>int million1 = 1000000; int
+million2 = 1_000_000;
+</code></pre></div>
+Las barras bajas se podrán añadir en cualquier parte del literal numérico excepto:<ul>
+<li>Al principio del literal.</li>
+<li>Al final del literal.</li>
+<li>Antes de un punto decimal.</li>
+<li>Después de un punto decimal.
+  Por ejemplo:</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>double notAtStart = _1000.00; //NO COMPILA
+double notAtEnd = 1000.00_; //NO COMPILA
+double notByDecimal = 1000_.00; //NO COMPILA
+double goodOne = 1_00_0.0_0; //COMPILA
+</code></pre></div>
+<h3 id="352-tipos-referencia">3.5.2. Tipos referencia</h3>
+<p>Un tipo referencia es un objeto (un objeto es una instancia de una clase). Al contrario que ocurre con las
+primitivas de datos, que guardan sus valores directamente en la memoria reservada por la variable, los
+tipos referencia no guardan los valores de los objetos en la dirección de memoria reservada cuando las
+variables son declaradas. En lugar de eso, la referencia “apunta” al objeto asignado a la variable
+guardando la dirección de memoria donde este se encuentra, concepto también conocido como puntero.
+Al contrario que en otros lenguajes, Java no permite conocer cuál es la dirección física en memoria donde
+están guardados sus objetos.
+La forma de declarar e inicializar tipos referencia es la siguiente, se consideran declaradas dos
+referencias, una de tipo java.util.Date , y otra de tipo String :
+<div class="highlight"><pre><span></span><code>java.util.Date hoy; String
+saludo;
+</code></pre></div>
+La variable hoy es una referencia de tipo Date, y únicamente puede “apuntar” a un objeto de tipo Date.
+La variable saludo es una variable que únicamente puede “apuntar” a un objeto de tipo String. Es posible
+asignar un valor a una referencia de las siguientes formas:</p>
+<ul>
+<li>A una referencia se le puede asignar un objeto de su mismo tipo de dato.</li>
+<li>A una referencia se le puede asignar un nuevo objeto utilizando para ello la palabra reservada <em>new</em>.
+  Por ejemplo, el siguiente código muestra dos asignaciones a nuevos objetos:
+<div class="highlight"><pre><span></span><code>hoy = new java.util.Date(); saludo
+= “¡Buenos días!”;
+</code></pre></div>
+La referencia hoy apunta a un Nuevo objeto de tipo Date en memoria, por lo que a partir de ahora hoy
+podrá ser utilizada para acceder a los métodos y atributos de la clase Date. De igual manera, la referencia
+saludo apunta a un nuevo objeto de tipo String, el cual tiene el valor “¡Buenos días!”. Los objetos String
+y Date únicamente pueden ser accedidos a través de sus referencias.
+La siguiente figura muestra un ejemplo de cómo las variables referencia se representan en memoria:
+<img alt="imagen tipo referencia" src="../img/img_1_tipo_referencia_java.jpg" /></li>
+</ul>
+<h3 id="353-diferencias-clave">3.5.3. Diferencias clave</h3>
+<p>Existen algunas diferencias muy importantes a tener en cuenta entre primitivas de datos y variables
+referencia. En primer lugar, las variables referencia pueden tener el valor null , lo que quiere decir que
+no tienen ningún objeto asignado. Las primitivas de datos mostrarán un error de compilación si se les
+intenta asignar el valor null. En el siguiente ejemplo, valor no puede ser null , ya que es de tipo int.
+<div class="highlight"><pre><span></span><code>int valor = null; //NO COMPILA
+String s = null;
+</code></pre></div>
+En segundo lugar, los tipos referencia pueden ser utilizados para llamar métodos siempre y cuando no
+sean null. Las primitivas de datos no tienen métodos. En el siguiente ejemplo, es posible llamar al método
+length() desde la variable texto porque texto es una variable de referencia. Se puede saber que length
+es un método ya que utiliza (). En la siguiente línea, cuando se intenta llamar al método length() sobre
+longitud , que es de tipo int (primitiva de datos), aparecerá un error de compilación, ya que las primitivas
+de tipo int no tienen una longitud definida.
+<div class="highlight"><pre><span></span><code>String texto = “hola”; int longitud =
+texto.length(); int mal =
+longitud.length(); //NO COMPILA
+</code></pre></div>
+Por último cabe destacar que las primitivas de datos están escritas en el lenguaje comenzando con letra
+minúsucla, mientras que las clases, siempre comienzan con letra mayúscula.</p>
+<h2 id="36-declarando-e-inicializando-variables">3.6. Declarando e inicializando variables</h2>
+<p>Hasta ahora se han visto ya numerosas variables. Una variable es, en realidad, un espacio de memoria
+donde se guardan datos. Cuando se declara una variable, es necesario especificar tanto su nombre como
+su tipo de dato. Por ejemplo, el siguiente código declara dos variables. Una es llamada zooName y es de
+tipo String. La otra es llamada numberAnimals y es de tipo int.
+<div class="highlight"><pre><span></span><code>String zooName; int
+numberAnimals;
+</code></pre></div>
+Ahora que se han declarados las variables, es posible asignarles valores; es decir, es posible inicializar
+las variables. Para inicializar una variable, es necesario escribir el nombre de la variable seguido del
+carácter =, seguido del valor a inicializar:
+<div class="highlight"><pre><span></span><code>zooName = &quot;El mejor Zoo&quot;; numberAnimals
+= 100;
+</code></pre></div>
+También es posible declarar e inicializar las variables en la misma línea:
+<div class="highlight"><pre><span></span><code>String zooName = &quot; El mejor Zoo &quot;; int
+numberAnimals = 100;
+</code></pre></div></p>
+<h3 id="361-declarar-multiples-variables">3.6.1. Declarar múltiples variables</h3>
+<p>También es posible declarar e inicializar varias variables en la misma línea. Por ejemplo, ¿Cuántas
+variables se han declarado e inicializado en las siguientes dos líneas?
+<div class="highlight"><pre><span></span><code>String s1, s2;
+String s3 = &quot;yes&quot;, s4 = &quot;no&quot;;
+</code></pre></div>
+La respuesta es cuatro variables de tipo String : s1, s2, s3 y s4. Es posible declarar tantas variables como
+se desee seguidas siempre y cuando estas pertenezcan al mismo tipo de dato. También es posible
+inicializar estas variables en la misma línea (todas, varias, o lo que se desee). En el ejemplo anterior, las
+variables s3 y s4 están inicializadas, pero las variables s1 y s2 están únicamente declaradas.
+Un ejemplo algo más complejo:
+<div class="highlight"><pre><span></span><code>int i1, i2, i3 = 0;
+</code></pre></div></p>
+<p>En este caso se han declarado tres variables: <em>i1</em> , <em>i2</em> e <em>i3</em> , pero únicamente <em>i3</em> ha sido inicializada con el
+valor 0. Es necesario tener en cuenta que, por cada “ , ”, hay una variable diferente cuya inicialización
+es independiente a las demás.
+El código siguiente, por ejemplo, no compilaría, ya que no es posible declarar en la misma sentencia
+variables de tipos de dato diferente:
+<div class="highlight"><pre><span></span><code>int num, String value; // NO COMPILA
+</code></pre></div>
+Por último, se verá el siguiente ejemplo, ¿Cuáles de las siguientes líneas serían válidas y cuáles no
+compilarían?
+<div class="highlight"><pre><span></span><code>1: boolean b1, b2;
+2: String s1 = &quot;1&quot;, s2;
+3: double d1, double d2;
+4: int i1; int i2;
+5: int i3; i4;
+</code></pre></div>
+La línea 1 es correcta. Declara dos variables de tipo <em>boolean</em> sin inicializar. La línea 2 también es correcta,
+ya que declara dos variables de tipo <em>String</em> e inicializa la primera de ellas con el valor “1”. La tercera
+línea no es correcta. Java no permite declarar dos variables de diferente tipo en la misma sentencia, y,
+a pesar de que en este caso ambas variables serían de tipo <em>double</em> , si se quieren declarar dos variables
+de mismo tipo en la misma línea, estas deben compartir la misma declaración del tipo de dato, y no
+repetirlo.
+La línea 4 también es correcta, y es que, aunque pueda parecer un caso igual al anterior, no es así, ya
+que la línea cuatro muestra dos sentencias en la misma línea (separadas por “;”).
+La línea 5 no es correcta, ya que, de nuevo, presenta dos sentencias, y la segunda de ella no tiene el
+tipo de dato necesario para declarar la variable <em>i4</em>.<br />
+Esto sería como escribir:
+<div class="highlight"><pre><span></span><code>int i3; i4; //NO COMPILA
+</code></pre></div></p>
+<h3 id="362-identificadores">3.6.2. Identificadores</h3>
+<p>Probablemente no sorprenda que Java tenga reglas precisas sobre nombres de identificadores.
+Afortunadamente, las mismas reglas para los identificadores se aplican a cualquier cosa que puedas
+nombrar, incluyendo variables, métodos, clases y campos. Sólo hay tres reglas a recordar para los
+identificadores legales:</p>
+<ul>
+<li>El nombre debe comenzar con una letra o el símbolo $ o _.</li>
+<li>Los caracteres posteriores también pueden ser números.</li>
+<li>No se puede usar el mismo nombre que una palabra reservada de Java. Una palabra reservada es una
+  palabra clave que Java ha reservado para que no se le permita utilizarla. Recordar que Java distingue
+  entre mayúsculas y minúsculas, por lo que se puede utilizar versiones de las palabras clave que sólo
+  difieren en mayúsculas y minúsculas, aunque es aconsejable no hacerlo.</li>
+</ul>
+<p>No hay que preocuparse, no se necesitará memorizar la lista completa de palabras reservadas. La
+siguiente lista es una lista de todas las palabras reservadas en Java. const y goto no se utilizan realmente
+en Java. Están reservados para que las personas que vienen de otros idiomas no los usen por accidente</p>
+<ul>
+<li>y en teoría, en caso de que Java quiera usarlos algún día.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Lista</th>
+<th>de   palabras</th>
+<th>resevadas</th>
+<th>de</th>
+<th>Java</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>abstract</td>
+<td>assert</td>
+<td>boolean</td>
+<td>break</td>
+<td>byte</td>
+</tr>
+<tr>
+<td>case</td>
+<td>catch</td>
+<td>char</td>
+<td>class</td>
+<td>const</td>
+</tr>
+<tr>
+<td>continue</td>
+<td>default</td>
+<td>do</td>
+<td>double</td>
+<td>else</td>
+</tr>
+<tr>
+<td>enum</td>
+<td>extends</td>
+<td>enum</td>
+<td>extends</td>
+<td>false</td>
+</tr>
+<tr>
+<td>float</td>
+<td>for</td>
+<td>goto*</td>
+<td>if</td>
+<td>implements</td>
+</tr>
+<tr>
+<td>import</td>
+<td>instanceof</td>
+<td>int</td>
+<td>interface</td>
+<td>long</td>
+</tr>
+<tr>
+<td>native</td>
+<td>new</td>
+<td>null</td>
+<td>package</td>
+<td>private</td>
+</tr>
+<tr>
+<td>protected</td>
+<td>public</td>
+<td>return</td>
+<td>short</td>
+<td>static</td>
+</tr>
+<tr>
+<td>strictfp</td>
+<td>super</td>
+<td>switch</td>
+<td>synchronized</td>
+<td>this</td>
+</tr>
+<tr>
+<td>throw</td>
+<td>throws</td>
+<td>transient</td>
+<td>true</td>
+<td>try</td>
+</tr>
+<tr>
+<td>void</td>
+<td>volatile</td>
+<td>while</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Los siguientes ejemplos son legales:
+<div class="highlight"><pre><span></span><code>okidentifier 
+$OK2Identifier
+_alsoOK1d3ntifi3r
+__SStillOkbutKnotsonice$
+</code></pre></div>
+Estos ejemplos no son legales:
+<div class="highlight"><pre><span></span><code>3DPointClass    // Los identificadores no pueden comenzar por un número
+hollywood@vine  // @ no es una letra, dígito, $ o _ 
+*$coffee        // * no es una letra, dígito, $ o _ 
+public          // public es una palabra reservada
+</code></pre></div>
+Aunque se puede hacer locuras con nombres de identificación, no se debería. Java tiene convenciones
+para que el código sea legible y consistente. Esta consistencia incluye CamelCase. En CamelCase, cada
+palabra comienza con una letra mayúscula. Esto facilita la lectura de nombres de variables de más de
+una palabra. ¿Qué sería más legible: thisismyclass name o ThisIsMyClass name? Cuando aparezca un
+identificador no estándar, hay que asegurarse de verificar si es legal.</p>
+<h4 id="identificadores-en-el-mundo-real">Identificadores en el mundo real</h4>
+<p>La mayoría de los desarrolladores siguen estas convenciones para identificar nombres:</p>
+<ul>
+<li>Los nombres de métodos y variables comienzan con una letra minúscula seguida de CamelCase.</li>
+<li>Los nombres de las clases comienzan con una letra mayúscula seguida de CamelCase. No se deben
+  usar identificadores con $. El compilador usa este símbolo para algunos archivos.</li>
+</ul>
+<p>Además, las letras válidas en Java no son sólo caracteres del alfabeto inglés. Java soporta el conjunto
+de caracteres Unicode, por lo que hay más de 45.000 caracteres que pueden iniciar un identificador Java
+legal. Unos pocos centenares más son números no árabes que pueden aparecer después del primer
+carácter en un identificador válido.</p>
+<h2 id="37-comprension-de-la-inicializacion-por-defecto-de-las-variables">3.7. Comprensión de la inicialización por defecto de las variables</h2>
+<p>Antes de poder utilizar una variable, necesita un valor. Algunos tipos de variables obtienen este valor
+automáticamente y otras requieren que el programador lo especifique. En las siguientes secciones, se
+verán las diferencias entre los valores predeterminados para las variables locales, de instancia y de
+clase.</p>
+<h3 id="371-variables-locales">3.7.1. Variables locales</h3>
+<p>Una variable local es una variable definida dentro de un método. Las variables locales deben ser
+inicializadas antes de su uso. No tienen un valor por defecto y contienen datos basura hasta que se
+inicializan. El compilador no le permitirá leer un valor sin inicializar. Por ejemplo, el siguiente código
+genera un error de compilación:
+<div class="highlight"><pre><span></span><code>4: public int notValid() {
+5: int y = 10;
+6: int x;
+7: int reply = x + y; // DOES NOT COMPILE
+8: return reply;
+9: }
+</code></pre></div>
+y se inicializa a 10. Sin embargo, debido a que x no se inicializa antes de ser utilizado en la expresión de
+la línea 7, el compilador genera el error de seguimiento:
+<div class="highlight"><pre><span></span><code>Test.java:5:
+
+variable x might not have been initialized int reply = x + y;
+^
+</code></pre></div>
+Hasta que a x no se le asigne un valor, no puede aparecer dentro de una expresión, y el compilador le
+recordará esta regla. El compilador sabe que su código tiene el control de lo que sucede dentro del
+método y puede esperar que inicialice los valores.
+El compilador es lo suficientemente inteligente como para reconocer variables que han sido inicializadas
+después de su declaración, pero antes de ser usadas. Aquí hay un ejemplo:
+<div class="highlight"><pre><span></span><code>public int valid() { int y = 10; int x; // x is declared
+here x = 3; // and initialized here int reply = x + y;
+return reply;
+}
+</code></pre></div>
+El compilador también es lo suficientemente inteligente como para reconocer inicializaciones más
+complejas. En este ejemplo, hay dos ramas de código y answer se inicializa en ambas. onlyOneBranch
+sólo se inicializa si check es verdadero. El compilador sabe que existe la posibilidad de que check sea
+falso y de que por lo tanto onlyOneBranch no se inicialice nunca, por lo que en el código hay un error de
+compilación. Se aprenderá más sobre la declaración if en el próximo capítulo.
+<div class="highlight"><pre><span></span><code>public void findAnswer(boolean check) { int answer; int onlyOneBranch; if(check) {
+onlyOneBranch = 1; answer = 1; } else { answer = 2;
+}
+System.out.println(answer);
+</code></pre></div></p>
+<h3 id="372-variables-de-clase-e-instancia">3.7.2. Variables de clase e instancia</h3>
+<p>Las variables que no son variables locales se conocen como variables de instancia o variables de clase.
+Las variables de instancia también se denominan fields. Las variables de clase se comparten entre varios
+objetos. Se puede decir que una variable es una variable de clase porque tiene la palabra clave static
+delante de ella. Se encontrará más información al respecto en el capítulo 4. Por ahora, sólo se debe saber
+que una variable es una variable de clase si tiene la palabra clave static en su declaración.
+Las variables de instancia y clase no requieren ser inicializadas.</p>
+<table>
+<thead>
+<tr>
+<th>Tipo de variable</th>
+<th>Valor por defecto de inicialización</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean</td>
+<td>false</td>
+</tr>
+<tr>
+<td>byte, short, int, long</td>
+<td>0 (en la longitud de bits del tipo)</td>
+</tr>
+<tr>
+<td>float, double</td>
+<td>0.0 (en la longitud de bits del tipo)</td>
+</tr>
+<tr>
+<td>char</td>
+<td>‘\u0000’ (NUL)</td>
+</tr>
+<tr>
+<td>Todas las referencias a objetos</td>
+<td>Null</td>
+</tr>
+</tbody>
+</table>
+<h2 id="38-entendiendo-el-ambito-de-las-variables">3.8. Entendiendo el ámbito de las variables</h2>
+<p>Se ha aprendido que las variables locales se declaran dentro de un método. ¿Cuántas variables locales
+se ven en este ejemplo?
+<div class="highlight"><pre><span></span><code>public void eat(int piecesOfCheese) { int bitesOfCheese = 1;
+}
+</code></pre></div>
+Hay dos variables locales en este método. bitesOfCheese se declara dentro del método. piecesOfCheese
+se llama parámetro de método. También es local al método. Se dice que ambas variables tienen un
+alcance local al método. Esto significa que no se pueden utilizar fuera del método.
+Las variables locales nunca pueden tener un alcance mayor que el método definido. Sin embargo, pueden
+tener un alcance menor. Ejemplo:
+<div class="highlight"><pre><span></span><code>3: public void eatIfHungry(boolean hungry) {
+4:  if (hungry) {
+5:  int bitesOfCheese = 1;
+6:  } // bitesOfCheese goes out of scope here
+
+7: System.out.println(bitesOfCheese);// NO COMPILA
+8: }
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>System.out.println(onlyOneBranch); // DOES NOT COMPILE
+}
+</code></pre></div></p>
+<p>hungry tiene un alcance de todo el método. bitesOfCheese tiene un alcance más pequeño. Sólo está
+disponible para su uso en la sentencia if porque se declara dentro de ella. Cuando se vea un juego de
+llaves ({ }) en el código, significa que se ha introducido un nuevo bloque de código. Cada bloque de
+código tiene su propio alcance. Cuando hay bloques múltiples, se emparejan de dentro hacia fuera. En
+este caso, el bloque de sentencia if comienza en la línea 4 y termina en la línea 6. El bloque del método
+comienza en la línea 3 y termina en la línea 8.
+Dado que bitesOfCheese se declara en tal bloque, el ámbito de aplicación se limita a dicho bloque. Cuando
+el compilador llega a la línea 7, muestra que no sabe nada sobre bitesOfCheese y da un error:
+<div class="highlight"><pre><span></span><code>bitesOfCheese cannot be resolved to a variable
+</code></pre></div>
+Recordar que los bloques pueden contener otros bloques. Estos bloques más pequeños contenidos
+pueden referenciar variables definidas en los bloques de mayor tamaño, pero no viceversa. Por ejemplo:
+<div class="highlight"><pre><span></span><code>16: public void eatIfHungry(boolean hungry) {
+17: if (hungry) {
+18: int bitesOfCheese = 1;
+19: {
+20: boolean teenyBit = true;
+21: System.out.println(bitesOfCheese);
+22: }
+23: }
+24: System.out.println(teenyBit); // NO COMPILA
+25: }
+</code></pre></div>
+La variable definida en la línea 18 está en alcance hasta que el bloque termina en la línea 23. Usarlo en
+el bloque más pequeño de las líneas 19 a 22 es seguro. La variable definida en la línea 20 queda fuera
+del alcance en la línea 22. No está permitido su uso en la línea 24. No hay que preocuparse si aún no se
+está familiarizado con las declaraciones o los bucles. No importa lo que haga el código, ya que se está
+hablando del alcance. A continuación, se intentará determinar, en qué línea, cada una de las variables
+locales entra y sale del alcance:
+<div class="highlight"><pre><span></span><code>11: public void eatMore(boolean hungry, int amountOfFood) {
+12: int roomInBelly = 5;
+13: if (hungry) {
+14: boolean timeToEat = true;
+15: while (amountOfFood &gt; 0) {
+16: int amountEaten = 2;
+17: roomInBelly = roomInBelly - amountEaten;
+18: amountOfFood = amountOfFood - amountEaten;
+19: }
+20: }
+21: System.out.println(amountOfFood);
+22: }
+</code></pre></div>
+El primer paso para determinar el alcance es identificar los bloques de código. En este caso, hay tres
+bloques. Se puede decir esto porque hay tres juegos de llaves. Partiendo del conjunto más interno, se
+puede ver dónde comienza y termina el bloque del bucle while. Se repetirá esto mientras se sale, para
+el bloque de sentencia <strong>if</strong> y el bloque de método. La Tabla 1.3 muestra los números de línea que cada
+bloque comienza y termina.</p>
+<table>
+<thead>
+<tr>
+<th>Bloque</th>
+<th>Primera línea del bloque</th>
+<th>Ultima línea del bloque</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>while</td>
+<td>15</td>
+<td>19</td>
+</tr>
+<tr>
+<td>if</td>
+<td>13</td>
+<td>20</td>
+</tr>
+<tr>
+<td>method</td>
+<td>11</td>
+<td>22</td>
+</tr>
+</tbody>
+</table>
+<p>Se necesitará practicar mucho esto. La identificación de bloques debe ser algo natural. La buena noticia
+es que hay muchos ejemplos de códigos para practicar.
+Ahora que se sabe dónde están los bloques, se puede ver el alcance de cada variable. hungry y
+amountOfFood son parámetros de método, por lo que están disponibles para todo el método. Esto
+significa que su ámbito de aplicación son las líneas 11 a 22. roomInBelly entra en el ámbito de aplicación
+de la línea 12 porque ahí es donde se declara. Se mantiene en el alcance para el resto del método y por
+lo tanto se sale del alcance en la línea 22. timeToEat entra en el alcance en la línea 14 donde se declara.
+Se sale del alcance en la línea 20 donde termina el bloque if. amountEaten entra en el ámbito de
+aplicación de la línea 16 donde se declara. Se sale del alcance en la línea 19 donde termina el bloque de
+tiempo.
+Todo eso era para variables locales. Afortunadamente, las reglas para las variables de instancia son más
+fáciles: están disponibles tan pronto como se definen y duran toda la vida útil del objeto en sí. La regla
+para las variables de clase (static) es aún más fácil: entran en alcance cuando se declaran como los otros
+tipos de variables. Sin embargo, permanecen en el alcance durante toda la vida del programa.
+A continuación, se hará un ejemplo más para asegurarse de que se tiene control sobre esto. Una vez
+más, se debe averiguar el tipo de las cuatro variables y cuándo entran y salen del alcance.
+<div class="highlight"><pre><span></span><code>1: public class Mouse {
+2: static int MAX_LENGTH = 5;
+3: int length;
+4: public void grow(int inches) {
+5: if (length &lt; MAX_LENGTH) {
+6: int newSize = length + inches;
+7: length = newSize;
+8: }
+9: }
+10:}
+</code></pre></div>
+En esta clase, se tiene una variable de clase (MAX_LENGTH), una variable de instancia (length) y dos
+variables locales (inches y newSize.) MAX_LENGTH es una variable de clase porque tiene la palabra clave
+static en su declaración. MAX_LENGTH entra en el ámbito de aplicación de la línea 2 donde se declara.
+Permanece en el alcance hasta que finaliza el programa. Length entra en el ámbito de la aplicación en la
+línea 3, donde se declara. Permanece en el alcance mientras el objeto Mouse exista. inches entra en
+alcance donde se declara en la línea 4. Se sale del alcance al final del método en la línea 9. newSize
+entra en el alcance donde se declara en la línea 6. Dado que está definido dentro del bloque de sentencia
+if, se sale del alcance cuando ese bloque termina en la línea 8. ¿Se ha resuelto todo? Ahora, se revisarán
+las reglas sobre el alcance:</p>
+<ul>
+<li>Variables locales: en el ámbito de aplicación desde la declaración hasta el final del bloque</li>
+<li>Variables de instancia: en el ámbito de aplicación de la declaración hasta que se recoge la basura del
+  objeto.</li>
+<li>Variables de clase: en el ámbito de aplicación de la declaración hasta que finalice el programa.</li>
+</ul>
+<h2 id="39-ordenando-elementos-en-una-clase">3.9. Ordenando elementos en una clase</h2>
+<p>Ahora que se ha visto las partes más comunes de una clase, se echará un vistazo al orden correcto para
+escribirlas en un archivo. Los comentarios pueden ir en cualquier parte del código. Más allá de eso, es
+necesario memorizar las reglas en la tabla siguiente:</p>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Ejemplo</th>
+<th>¿Necesario?</th>
+<th>¿Dónde va?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Declaración de paquete</td>
+<td>package abc;</td>
+<td>No</td>
+<td>Primera línea del archivo</td>
+</tr>
+<tr>
+<td>Sentencias de importación</td>
+<td>import java.util*;</td>
+<td>No</td>
+<td>Inmediatamente después del paquete</td>
+</tr>
+<tr>
+<td>Declaración de clase</td>
+<td>public class C</td>
+<td>Si</td>
+<td>Inmediatamente después de la importación</td>
+</tr>
+<tr>
+<td>Declaración de campos</td>
+<td>int value;</td>
+<td>No</td>
+<td>Cualquier lugar dentro de la clase</td>
+</tr>
+<tr>
+<td>Declaración de métodos</td>
+<td>void method()</td>
+<td>No</td>
+<td>Cualquier lugar dentro de la clase</td>
+</tr>
+</tbody>
+</table>
+<p>Se verán algunos ejemplos para ayudar a recordar esto. El primer ejemplo contiene uno de cada
+elemento:
+<div class="highlight"><pre><span></span><code>package structure; // package must be first non-comment import
+java.util.*; // import must come after package public class
+Meerkat { // then comes the class double weight; // fields
+and methods can go in either order public double getWeight()
+{ return weight; } double height; // another field – they
+don&#39;t need to be together }
+</code></pre></div>
+Hasta ahora todo bien. Este es un patrón común que se debe conocer. Véase otro ejemplo:
+<div class="highlight"><pre><span></span><code>/* header */ package
+structure; // class
+Meerkat public class
+Meerkat { }
+</code></pre></div>
+Sigue siendo bueno. Se puede poner comentarios en cualquier lugar, y las importaciones son opcionales.
+En el siguiente ejemplo, hay un problema:
+<div class="highlight"><pre><span></span><code>import java.util.*;
+package structure; // DOES NOT COMPILE String name; 
+// DOES NOT COMPILE public class Meerkat { }
+</code></pre></div></p>
+<p>Hay dos problemas aquí. Una es que el paquete y las declaraciones de importación se anulan. Aunque
+ambos son opcionales, el paquete debe llegar antes de la importación si está presente. La otra cuestión
+es que un campo intenta la declaración fuera de una clase. Esto no está permitido. Los campos y métodos
+deben estar dentro de una clase. ¿Se tiene todo?
+Un consejo, se debe recordar el acrónimo PIC (picture): package, import y class. Los campos y métodos
+son más fáciles de recordar porque simplemente tienen que estar dentro de una clase. Se pueden definir
+varias clases en el mismo archivo, pero sólo una de ellas puede ser pública. La clase pública coincide con
+el nombre del archivo. Por ejemplo, estas dos clases deben estar en un archivo llamado Meerkat. java:
+<div class="highlight"><pre><span></span><code>1: public class Meerkat { }
+2: class Paw { }
+</code></pre></div>
+En un archivo también se permite que ninguna de las clases sea pública. Mientras no haya más de una
+clase pública en un archivo, está bien.</p>
+<h2 id="310-destruyendo-objetos">3.10. Destruyendo Objetos</h2>
+<p>Ahora que se ha trabajado con objetos, es hora de deshacerse de ellos. Por suerte, Java se encarga
+automáticamente de esto, proporcionando una herramienta llamada Garbage Collector (“recolector de
+basura”), el cual busca automáticamente objetos que ya no están en uso.
+Todos los objetos Java se almacenan en la memoria del programa, siendo el heap un gran grupo de
+memoria no utilizada asignada a una aplicación Java. El heap puede ser bastante grande dependiendo
+del entorno, pero siempre tiene un límite de tamaño. Si el programa sigue instanciando objetos y
+dejándolos en el heap , llegará un momento en el que se quedará sin memoria.</p>
+<p>En las siguientes secciones se verá la Garbage Collection o "recolección de basura" y el método finalize().</p>
+<h3 id="3101-garbage-collection">3.10.1. Garbage Collection</h3>
+<p>El concepto Garbage Collection en Java hace referencia al proceso de liberar automáticamente la memoria
+en el heap borrando objetos que ya no son accesibles en un programa; es decir, objetos que han quedado
+desreferenciados. Existen muchos algoritmos diferentes para la Garbage Collection, pero no es necesario
+conocer ninguno de ellos. Sí que es necesario; no obstante, familiarizarse con el método System.gc(), la
+cual ejecuta el Garbage Collector, recogiendo aquellos objetos ya no referenciados en el código.
+El método System.gc() no siempre puede ejecutar el Garbage Collector, sino que realmente, a pesar de
+que sí se le ordena a Java que lleve a cabo esta acción, esta podría ser ignorada.
+La parte más interesante de la Garbage Collection es cuando la memoria perteneciente a un objeto ya
+desreferenciado es recuperada. Java es capaz de detectar cuándo un objeto ya no es utilizado en ninguna
+parte del código.<br />
+Esto puede darse en dos situaciones:</p>
+<ul>
+<li>El objeto ya no tiene referencias que lo apunten.</li>
+<li>Todas las referencias al objeto están fuera de ámbito. S</li>
+</ul>
+<h4 id="objetos-vs-referencias">Objetos vs Referencias</h4>
+<p>No debe confundirse una referencia con el objeto al que se refiere; son dos entidades diferentes. La
+referencia es una variable que tiene un nombre y se puede utilizar para acceder al contenido de un</p>
+<p>objeto. Se puede asignar una referencia a otra referencia, pasarla a un método o devolverla desde un
+método. Todas las referencias son del mismo tamaño, independientemente de su tipo.
+Un objeto se deposita en el heap y no tiene nombre. Por lo tanto, no hay manera de acceder a un objeto
+excepto a través de una referencia. Los objetos vienen en todas las formas y tamaños diferentes y
+consumen cantidades variables de memoria. Un objeto no se puede asignar a otro objeto, ni tampoco se
+puede pasar un objeto a un método o devolverlo desde un método. Es el objeto quien recibe el Garbage
+Collection, no su referencia.
+<img alt="garbage collection" src="../img/img_1_garbage_collection_java.jpg" /></p>
+<p>Comprender la diferencia entre una referencia y un objeto ayuda mucho a entender la Garbage Collection,
+el operador new y muchas otras facetas del lenguaje Java. Observando el siguiente código se puede ver
+cuándo un objeto es elegible para ser recolectado por el Garbage Collector:
+<div class="highlight"><pre><span></span><code>1: public class Scope {
+2: public static void main(String[] args) {
+3: String one, two;
+4: one = new String(&quot;a&quot;);
+5: two = new String(&quot;b&quot;);
+6: one = two;
+7: String three = one;
+8: one = null;
+9: } }
+</code></pre></div>
+A la hora de llevar a cabo una traza del código es posible cometer errores, por lo que habrá que prestar
+especial atención. En la línea 3 se crean dos variables: one y two. Sólo las variables, que son referencias
+que no apuntan todavía a nada. No hay necesidad de dibujar cajas o flechas que ayuden a comprender
+el código, ya que no hay objetos en el heap todavía. En la línea 4 se crea el primer objeto. Se dibujará
+una caja con la cadena "a" dentro y luego una flecha de la palabra one a esa caja. La línea 5 es similar.
+Se dibujará otra caja con la cadena "b" en ella esta vez y una flecha desde la palabra two. En este punto,
+el esquema debería verse como la figura siguiente.
+<img alt="one_two_garbage_collection" src="../img/img_2_garbage_collection_java.jpg" /></p>
+<p>En la línea 6, la variable one cambia a "b". Se borrará la flecha de one y se dibujará una nueva flecha de
+one a "b". En la línea 7, se tiene una nueva variable, así que se escribirá la palabra three y se dibujará
+una flecha de three a "b". Existen tres variables que señalan a "b" en este momento, y ninguna que
+señale a "a".
+<img alt="un_dos_tres" src="../img/img_3_garbage_collection_java.jpg" /></p>
+<p>Finalmente habría que eliminar la flecha entre one y
+"b", ya que la línea 8 establece esta variable como
+nula. Este seguimiento pretendía
+encontrar cuándo los objetos eran elegibles para ser recolectados por el Garbage Collector. En la línea 6
+se eliminó la única referencia que apuntaba a "a", haciendo que ese objeto fuera apto para el Garbage
+Collector. "B" tiene referencias apuntando hacia él hasta que sale del ámbito del código. Esto significa
+que "b" no es escogido por el GC hasta el final del método en la línea
+9.</p>
+<h3 id="3102-finalize">3.10.2. finalize()</h3>
+<p>Java permite a los objetos implementar un método llamado finalize(). Este método se llama si el Garbage
+Collector intenta recoger el objeto. Si el Grabage Collector no se ejecuta, el método no es llamado nunca.
+Si el Garbage Collector no puede recoger el objeto e intenta ejecutarse de nuevo más tarde, el método
+no se vuelve a llamar por segunda vez.</p>
+<p>En la práctica, esto significa que es muy poco probable que se utilice en proyectos reales. Sólo hay que
+tener en cuenta que puede que no se llame y que definitivamente no será llamado dos veces.</p>
+<p>Dicho esto, esta llamada no produce ninguna salida cuando la ejecutamos:</p>
+<p><div class="highlight"><pre><span></span><code>public class Finalizer {
+protected void finalize() {
+    System.out.println(&quot;Calling finalize&quot;);
+   }
+    public static void main(String[] args) {
+Finalizer
+
+    f = new Finalizer();
+    }
+}
+</code></pre></div>
+La razón es que el programa termina antes de que exista la necesidad de ejecutar el Garbage Collector.
+A pesar de que f es elegible para la Garbage Collection, Java no ejecuta el Garbage Collector
+constantemente. Ahora un ejemplo más interesante:
+<div class="highlight"><pre><span></span><code>public class Finalizer { 
+private static List
+    objects = new ArrayList();
+
+    protected void finalize() { 
+    objects.add(this); // Don&#39;t do this 
+    } 
+}
+</code></pre></div>
+Es preciso recordar que finalize() sólo se ejecuta cuando el objeto es elegible para el Garbage Collector.
+El problema aquí es que al final del método, el objeto ya no es elegible para el Garbage Collector porque
+una variable estática hace referencia a él, y las variables estáticas pertenecen al ámbito de la aplicación
+hasta que el programa termina. Java es lo suficientemente inteligente como para darse cuenta de esto
+y aborta el intento de eliminar el objeto. Ahora supóngase que más tarde, en el programa, los objetos
+toman el valor de cero. Finalmente, se puede eliminar el objeto de la memoria. Java recuerda que ya se
+ha ejecutado finalize (en este objeto), y no lo hará de nuevo.</p>
+<h2 id="311-beneficios-de-java">3.11. Beneficios de Java</h2>
+<p>Java tiene algunos beneficios clave que se necesitará conocer:  </p>
+<h4 id="orientado-a-objetos">Orientado a Objetos:</h4>
+<p>Java es un lenguaje orientado a objetos, lo que significa que todo el código se define en clases y la
+mayoría de esas clases pueden ser instanciadas en objetos. Muchos idiomas antes de Java eran
+procedurales, lo que significaba que había rutinas o métodos, pero no había clases. Otro enfoque
+común es la programación funcional. Java permite la programación funcional dentro de una clase, pero
+el objeto orientado sigue siendo la organización principal del código.  </p>
+<h4 id="encapsulamiento">Encapsulamiento :</h4>
+<p>Java soporta modificadores de acceso para proteger los datos de accesos y modificaciones no deseados.
+Se considera que la encapsulación es un aspecto de los lenguajes orientados a objetos.  </p>
+<h4 id="plataforma-independiente">Plataforma Independiente :</h4>
+<p>Java es un lenguaje interpretado porque se compila en bytecode. Una ventaja clave es que el código
+Java se compila una vez en lugar de tener que ser recompilado para diferentes sistemas operativos.
+Esto se conoce como "write once, run everywhere”.  </p>
+<h4 id="robusto">Robusto:</h4>
+<p>Una de las principales ventajas de Java sobre C++ es que previene las fugas de memoria. Java maneja
+la memoria por su cuenta y ejecuta el Garbage Collector automáticamente. La mala gestión de la
+memoria en C++ es una gran fuente de errores en los programas.  </p>
+<h4 id="simple">Simple:</h4>
+<p>Java pretendía ser más simple que C++. Además de eliminar los punteros, eliminó la sobrecarga del
+operador. En C++, se podría escribir a + b y hacer que signifique casi cualquier cosa.  </p>
+<h4 id="seguro">Seguro:</h4>
+<p>El código Java se ejecuta dentro del JVM. Esto crea una sandbox que dificulta que el código Java lleve a
+cabo acciones maliciosas en el ordenador en el que se está ejecutando.</p>
+<h2 id="312-resumen">3.12. Resumen</h2>
+<p>En este capítulo, se ha visto que:</p>
+<p><strong>Estructura de las clases Java</strong></p>
+<ul>
+<li>Las clases Java consisten en miembros llamados campos y métodos.</li>
+<li>Un objeto es una instancia de una clase Java.</li>
+<li>Hay tres estilos de comentario: un comentario de una sola línea (//), un comentario de varias líneas (/<em>
+  </em>/), y un comentario Javadoc (/*<em> </em>/).</li>
+</ul>
+<p><strong>Método main</strong></p>
+<ul>
+<li>Java inicia la ejecución del programa con un método main(). La cabecera más común para este método
+  se ejecuta desde la línea de comandos: public static void main (String[] args).</li>
+<li>Los argumentos se pasan después del nombre de la clase, como en java NameOfClass firstArgument. -
+  Los argumentos son indexados comenzando con 0.</li>
+</ul>
+<p><strong>Paquetes e importaciones</strong></p>
+<ul>
+<li>El código Java está organizado en carpetas llamadas paquetes.</li>
+<li>Para hacer referencia a clases en otros paquetes, se utilizará una declaración de importación.</li>
+<li>El carácter * al final de una sentencia de importación significa que desea importar todas las clases en
+  ese paquete. No incluye paquetes que estén dentro de ese paquete. - - - java. lang es un paquete
+  especial que no necesita ser importado.</li>
+</ul>
+<p><strong>Crear objetos Java</strong></p>
+<ul>
+<li>Los constructores crean objetos Java.</li>
+<li>Un constructor es un método que corresponde al nombre de la clase y omite el tipo de devolución.</li>
+<li>Cuando un objeto es instanciado, los bloques de código se inicializan primero. Una vez inicializados, se
+  puede hacer uso de los constructores.</li>
+</ul>
+<p><strong>Referencias a objetos y primitivas de datos</strong></p>
+<ul>
+<li>Los tipos primitivos son los bloques básicos de construcción de los tipos Java. Se montan en tipos de
+  referencia.</li>
+<li>Las clases de referencia pueden tener métodos y asignarse a nulo. Además de los números "normales",
+  se permite que los literales numéricos comiencen con 0 (octal), 0x (hex), 0X (hex), 0b (binario), o 0B
+  (binario).</li>
+<li>Los literales numéricos también pueden contener guiones bajos siempre y cuando estén directamente
+  entre otros dos números.</li>
+</ul>
+<p><strong>Declarar e inicializar variables</strong></p>
+<ul>
+<li>Declarar una variable implica indicar el tipo de datos y darle un nombre a la variable.</li>
+<li>Las variables que representan campos en una clase se inicializan automáticamente a su correspondiente
+  valor cero o nulo durante la instanciación del objeto.</li>
+<li>Las variables locales deben ser inicializadas específicamente.</li>
+<li>Los identificadores pueden contener letras, números, $ o _. Los identificadores no pueden comenzar
+  con números.</li>
+<li>El ámbito de aplicación se refiere a la parte del código en la que se puede acceder a una variable.</li>
+<li>Hay tres tipos de variables en Java, dependiendo de su alcance: variables de instancia, variables de
+  clase y variables locales.</li>
+<li>Las variables de instancia son los campos no estáticos de su clase.</li>
+<li>Las variables de clase son los campos estáticos dentro de una clase.</li>
+<li>Las variables locales se declaran dentro de un método.</li>
+</ul>
+<p><strong>Ordenando elementos de una clase</strong></p>
+<ul>
+<li>Para algunos elementos de la clase, el orden importa dentro del código.</li>
+<li>La declaración del paquete viene primero si está presente. Luego vienen las declaraciones de
+  importación si están presentes. Luego viene la declaración de clase. Los campos y métodos pueden
+  estar en cualquier orden dentro de la clase.</li>
+</ul>
+<p><strong>Destruyendo objetos</strong></p>
+<ul>
+<li>El Garbage Collector es el responsable de retirar objetos de la memoria cuando no se pueden volver a
+  utilizar.</li>
+<li>Un objeto se convierte en elegible para el Garbage Collector cuando no hay más referencias a él o sus
+  referencias han salido del alcance. - El método finalize() se ejecutará una vez para cada objeto cuando
+  es ejecutado el Garbage Collector.</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../entorno/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Entorno de desarrollo
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../operaciones_sentencias/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Operaciones y Sentencias
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
